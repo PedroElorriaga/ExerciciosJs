@@ -9,6 +9,7 @@ function search(){
     var getBornYear = document.getElementById('num1')
     var getBornAgeINT = Number(dateYear - getBornYear.value)
     var resultado = document.getElementById('res')
+    var resultadoDinam = document.getElementById('imgdiv')
     //Forma dinamica
 
     var img = document.createElement('img')//createElement foi usado para criar um elemento de imagem
@@ -21,30 +22,37 @@ function search(){
     } else {
         var getSex = document.getElementsByName('sexo')
         // Verifica o sexo e calcula a idade
+        resultadoDinam.innerHTML = ''
         if (getSex[0].checked){
             if (getBornAgeINT >= 0 && getBornAgeINT < 5){
                 resultado.innerHTML = `<b>É um bebê menino</b>`
                 img.setAttribute('src', 'img/Bebemale.png')
-                resultado.appendChild(img)
                 
             } else if (getBornAgeINT <= 17){
                 resultado.innerHTML = `<b>É um menino de ${getBornAgeINT} anos de idade</b>`
-                
+                img.setAttribute('src', 'img/Menino.png')
+
             } else {
                 resultado.innerHTML = `<b>É um homem de ${getBornAgeINT} anos de idade</b>`
-                
+                img.setAttribute('src', 'img/homem.png')
+
             }
+            resultadoDinam.appendChild(img)
         } else {
             if (getBornAgeINT >= 0 && getBornAgeINT < 5){
                 resultado.innerHTML = `<b>É uma baby girl</b>`
+                img.setAttribute('src', 'img/bebefem.png')
                 
             } else if (getBornAgeINT <= 17){
                 resultado.innerHTML = `<b>É uma menina de ${getBornAgeINT} anos de idade</b>`
+                img.setAttribute('src', 'img/menina.png')
                 
             } else {
                 resultado.innerHTML = `<b>É uma mulher de ${getBornAgeINT} anos de idade</b>`
+                img.setAttribute('src', 'img/mulher.png')
                 
             }
+            resultadoDinam.appendChild(img)
         }
     }
 
