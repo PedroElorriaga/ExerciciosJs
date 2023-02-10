@@ -13,11 +13,14 @@
     </header>
     <section>
         <div>
-            <p>Adicione um numero: <input type="number" name="userInput" id="userInput-id"> <input type="button" value="Adicionar"
-                onclick="buscar()"></p>
+            <p>Adicione um numero: <input type="number" name="userInput" id="userInput-id" placeholder="Numero de 1 a 100">
+                <input type="button" value="Adicionar" onclick="buscar()"></p>
+
+            <select name="escolher" id="escolher-id" size="10"><!--Adicionar Options de forma dinâmica--></select> <input id="btn-confirm" 
+                type="button" value="Confirmar" onclick="calcular()">
         </div>
-        <div>
-            <select name="escolher" id="escolher-id" size="10"><!--Adicionar Options de forma dinâmica--></select>
+        <div id="divResultado-id">
+            
         </div>
     </section>
     <footer>

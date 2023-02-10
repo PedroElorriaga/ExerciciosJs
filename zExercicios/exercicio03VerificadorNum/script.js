@@ -1,4 +1,6 @@
 let listaNumUser = []
+
+
 function buscar(){
     //Pegar informações fornecidas pelo USER
     let getInputUser = document.getElementById('userInput-id')
@@ -8,18 +10,52 @@ function buscar(){
     
     if (getInputUser.value.length == 0){
         window.alert('ERRO! PREENCHA O CAMPO NECESSÁRIO.')
+
     } else {
             //Verifica se o elemento digitado está na lista
             if (listaNumUser.includes(Number(getInputUser.value))){
-                window.alert('ERRO')
+                window.alert('ERRO! NUMERO JÁ INSERIDO')
 
             } else {
-                listaNumUser.push(Number(getInputUser.value))
-                let createOption = document.createElement('option')
-                createOption.text = `Numero ${Number(getInputUser.value)}`
-                getSelect.appendChild(createOption)
-                console.log(listaNumUser)
+                if (Number(getInputUser.value) >=1 && Number(getInputUser.value) <=100){
+                    listaNumUser.push(Number(getInputUser.value))
+                    let createOption = document.createElement('option')
+                    createOption.text = `Valor ${Number(getInputUser.value)} adicionado`
+                    getSelect.appendChild(createOption)
+                    console.log(listaNumUser)
+
+                } else {
+                    window.alert('ERRO! DIGITE NÚMEROS ENTRE 1 A 100')
+
+                }            
             }
         }
-    //Parei na verificando se o numero esta na lista
+    
+}
+
+
+function calcular(){
+
+    if (listaNumUser.length == 0){
+        window.alert('ERRO! ADICIONE OS DADOS ANTES DE CONFIRMAR')
+
+    } else {
+        var somaItens = 0
+
+        for(c = 0;c < listaNumUser.length;c++){
+            var somaItens = listaNumUser[c] + somaItens
+    
+        }
+        let media = somaItens / c
+
+        let max = Math.max(...listaNumUser)
+        let min = Math.min(...listaNumUser)
+        
+        let exibirResultado = document.getElementById('divResultado-id')
+        exibirResultado.innerHTML = `<p>A soma dos valores inseridos é <b>${somaItens}</b></p>
+        <p>A média dos valores é <b>${media}</b></p><p>A quantidade de números é <b>${c}</b></p>
+        <p>O maior número é <b>${max}</b></p>
+        <p>O menor número é <b>${min}</b></p>`
+
+    }
 }
