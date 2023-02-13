@@ -27,7 +27,11 @@ function buscar(){
                 } else {
                     window.alert('ERRO! DIGITE NÚMEROS ENTRE 1 A 100')
 
-                }            
+                }
+
+                // Apaga o valor que estava no userInput-id no arqv HTML e foca a digitação no mesmo
+                getInputUser.value = ''
+                getInputUser.focus()            
             }
         }
     
