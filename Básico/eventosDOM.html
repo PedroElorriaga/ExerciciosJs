@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            background-color: rgb(193, 193, 193);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-size: 18pt;
+        }
+
+        div#btn1 {
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            line-height: 200px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos no DOM</h1>
+    <div id="btn1">
+        Passe o mouse
+    </div>
+    <script>
+        var event = document.getElementById('btn1') //Pega o elemento pelo id
+        event.addEventListener('click', click_mouse) // Adiciona o evento a variavel
+        event.addEventListener('mouseout', exit_mouse)
+        event.addEventListener('mouseenter', enter_mouse)
+
+        function enter_mouse(){
+            event.innerText = 'Entrou' //é como se fosse o DEF em python
+        }
+
+        function exit_mouse(){
+            event.innerText = 'Saiu'
+            event.style.background = 'white'
+        }
+
+        function click_mouse(){
+            event.innerText = 'Clicou'
+            event.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

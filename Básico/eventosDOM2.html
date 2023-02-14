@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM 2</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somar</h1>
+    <input type="number" name="int1" id="int1"> +
+    <input type="number" name="int2" id="int2"> 
+    <input type="button" id="btn" value="Somar" onclick="somar()"><!--Botão que chama a função somar()-->
+
+    <div id="res">O resultado é: </div>
+
+    <script>
+        function somar(){
+            var num1 = document.getElementById('int1')// Pega o primeiro elemento 
+            var num2 = document.getElementById('int2')// Pega o segundo elemento
+            var res = document.getElementById('res') // Pega id da div resultado
+
+            var n1 = Number(num1.value) /* Tranforma o valor em inteiro, porque ele vem como texto
+            , sendo assim devemos usar .value para pegar apenas o valor da váriavel*/
+            var n2 = Number(num2.value)
+            var resultado = n1 + n2 // faz a soma
+
+            res.innerHTML = `${res.innerHTML} ${resultado}` // Exibe o resultado
+        }
+    </script>
+</body>
+</html>

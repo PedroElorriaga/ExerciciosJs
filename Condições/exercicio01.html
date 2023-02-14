@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passaport</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="principal">
+        <input type="text" name="info" id="info">
+        <input type="button" value="Enviar" onclick="verificar()">
+        <div id="msg"></div>
+    </div>
+    <script>
+        function verificar(){
+            var info = document.getElementById('info')
+            var getInfo = String(info.value)
+            var msg = document.getElementById('msg')
+            
+            if (getInfo == 'Brasil'){
+                msg.innerHTML = `Você é Brasileiro, seu pais é ${getInfo}`
+            }
+            else{
+                msg.innerHTML = `Você é estrangeiro, seu pais é ${getInfo}` 
+            }
+        }
+    </script>
+</body>
+</html>
