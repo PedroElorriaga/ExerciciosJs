@@ -7,4 +7,4 @@ const data = new Date()
 const anoAtual = data.getFullYear()
 let anoNascimento = anoAtual - idade
 
-console.log(`Paciente: ${nome}, idade: ${idade} anos, nascido em ${anoNascimento}, tem o IMC de ${imc}`)
+console.log(`Paciente: ${nome} idade: ${idade} anos, nascido em ${anoNascimento}, tem o IMC de ${imc}`)
