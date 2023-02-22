@@ -7,7 +7,7 @@ let res = document.getElementById('img')
 
 let imgR = document.createElement('img')
 
-hours.innerHTML = `Agora são ${timeHour} horas e ${timeMinute} minutos`
+hours.innerHTML = `Agora são ${timeHour} horas e ${timeMinute.toFixed(2)} minutos`
 
 res.innerHTML = ''
 if (timeHour > 4 && timeHour < 12){

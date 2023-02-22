@@ -57,7 +57,7 @@ function calcular(){
         
         let exibirResultado = document.getElementById('divResultado-id')
         exibirResultado.innerHTML = `<p>A soma dos valores inseridos é <b>${somaItens}</b></p>
-        <p>A média dos valores é <b>${media}</b></p><p>A quantidade de números é <b>${c}</b></p>
+        <p>A média dos valores é <b>${media.toFixed(2)}</b></p><p>A quantidade de números é <b>${c}</b></p>
         <p>O maior número é <b>${max}</b></p>
         <p>O menor número é <b>${min}</b></p>`
 

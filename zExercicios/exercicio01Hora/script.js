@@ -4,7 +4,7 @@ var timeMinute = data.getMinutes()
 var hour = document.getElementById('horas')
 var img = document.getElementById('imgCh')
 //var timeHour = 20
-hour.innerHTML = `Agora são ${timeHour} horas e ${timeMinute} minutos`
+hour.innerHTML = `Agora são ${timeHour} horas e ${timeMinute.toFixed(2)} minutos`
 
 if (timeHour >=5 && timeHour < 12){
     img.src = 'img/manhã.png'
