@@ -4,7 +4,7 @@ function search(){
 
     var data = new Date()
     var dateYear = data.getFullYear()
-    //Get ids
+    //Get ids 
 
     var getBornYear = document.getElementById('num1')
     var getBornAgeINT = Number(dateYear - getBornYear.value)
