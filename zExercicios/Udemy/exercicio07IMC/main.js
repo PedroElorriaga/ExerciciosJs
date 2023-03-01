@@ -2,18 +2,22 @@ let form = document.querySelector('.form')
 
 
 form.addEventListener('submit', function (event) {
-    event.preventDefault()
-    let peso = event.target.querySelector('#peso')
-    let altura = event.target.querySelector('#altura')
+    event.preventDefault() // Não atualiza a página qnd submit for acionado
 
+    // Pega os inputs
+    let peso = document.querySelector('#peso') 
+    let altura = document.querySelector('#altura')
+
+    // Faz o calculo do IMC
     let imc = Number(peso.value) / (Number(altura.value) ** 2) 
     setResultado(imc.toFixed(2))
     
 });
 
 function setResultado(imc) {
+    // Pega o campo resultado no HTML
     let resultado = document.querySelector('.resultado')
-    resultado.innerHTML = ``
+    resultado.innerHTML = `` // deixa em branco o resultado
     let p = document.createElement('p')
     p.innerHTML = `Seu IMC é de <b>${imc}</b>`
 
