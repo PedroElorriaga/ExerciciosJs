@@ -1,13 +1,15 @@
 let data = new Date()
-let timeHour = data.getMinutes()
-let timeMinute = data.getMinutes()
+let timeHour = data.getHours() >= 10 ? data.getHours() : `0${data.getHours()}`
+let timeMinute = data.getMinutes() >= 10 ? data.getMinutes() : `0${data.getMinutes()}`
+
+//let formatMinute = timeMinute >= 10 ? timeMinute : `0${timeMinute}`
 
 let hours = document.getElementById('horas')
 let res = document.getElementById('img')
 
 let imgR = document.createElement('img')
 
-hours.innerHTML = `Agora são ${timeHour} horas e ${timeMinute.toFixed(2)} minutos`
+hours.innerHTML = `Agora são ${timeHour} horas e ${timeMinute} minutos`
 
 res.innerHTML = ''
 if (timeHour > 4 && timeHour < 12){
