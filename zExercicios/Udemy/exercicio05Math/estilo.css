@@ -1,0 +1,20 @@
+section {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px rgb(35, 34, 34);
+}
+
+body {
+    background-color: rgb(91, 89, 89);
+}
+
+p#resDinamico {
+    text-align: left;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serach Numbers</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Search Number</h1>
+    </header>
+    <section>
+        <div>
+            <p>Adicione um numero: <input type="number" name="userInput" id="userInput-id" placeholder="Numero de 1 a 100">
+                <input type="button" value="Adicionar" onclick="buscar()"></p>
+
+            <select name="escolher" id="escolher-id" size="10"><!--Adicionar Options de forma dinâmica--></select> <input id="btn-confirm" 
+                type="button" value="Confirmar" onclick="calcular()">
+        </div>
+        <div id="divResultado-id">
+            
+        </div>
+    </section>
+    <footer>
+        <p>&copysr; Direitos reservados para Pedrita</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

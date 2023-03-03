@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Verificar idade</h1>
+    </header>
+    <section>
+        <div>    
+               Ano de Nascimento: 
+               <input type="number" name="num1" id="num1" placeholder="Digite aqui" max="2023">
+               
+        </div>
+        <div>
+            Sexo: <input type="radio" name="sexo" id="malesex" value="Masculino" checked>
+            <label for="malesex">Masculino</label>
+            <input type="radio" name="sexo" id="femalesex" value="Feminino">
+            <label for="femalesex">Feminino</label>
+        </div>
+        <div>
+            <input type="button" value="Verificar" onclick="search()">
+        </div>
+        <div id="res">
+            Preencha os campos acima para verificar!
+        </div>
+        <div id="imgdiv">
+            <img id="img" src="">
+        </div>
+        </section>
+<!----> 
+    </section>
+    <footer>
+        <p>&copysr; Direitos reservados para Pedrita</p>
+    </footer>
+    <script src="scriptIMGdinamica.js"></script> <!--Modo dinamico-->
+   <!--<script src="script.js"></script>--> <!--Modo padrão-->
+</body>
+</html>
