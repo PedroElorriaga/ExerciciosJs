@@ -11,6 +11,7 @@ form.addEventListener('submit', function (event) {
     // Faz o calculo do IMC
     let imc = Number(peso.value) / (Number(altura.value) ** 2) 
 
+    // Verifica se user digitou algo e se é Num
     if (peso.value == '' || altura.value == '') {
         window.alert('Preencha os campos corretamente')
 
