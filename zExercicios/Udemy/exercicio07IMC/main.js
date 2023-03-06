@@ -21,8 +21,6 @@ form.addEventListener('submit', function (event) {
         setResultado(imc.toFixed(2))
 
     }
-    
-    
 });
 
 function setResultado(imc) {
