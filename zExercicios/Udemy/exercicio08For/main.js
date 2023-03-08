@@ -5,7 +5,7 @@ const elementos = [
     { tag: 'section', texto: 'Frase 4' },
 ];
 
-const contanier = document.querySelector('.container');
+const container = document.querySelector('.container');
 const div = document.createElement('div');
 
 for (let i = 0; i < elementos.length; i++) {
@@ -15,4 +15,4 @@ for (let i = 0; i < elementos.length; i++) {
     div.appendChild(temp);
 }
 
-contanier.append(div);
+container.appendChild(div);
