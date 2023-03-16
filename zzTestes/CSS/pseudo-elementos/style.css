@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.after {
+    margin: 0 30px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 20px;
+}
+
+.after ul li::after {
+    /* O after modificamos tudo que vem após os elementos */
+    content: ' ADD';
+    /* é usado para modificar o conteudo, aqui no caso como estamos usando after, ele adicionou logo ao fim do elemento*/
+    color: darkmagenta;
+}
+
+.after~div {
+    margin: 30px 30px;
+}
+
+.before ul li::before {
+    /* É usado para modificar tudo que vem antes dos elementos */
+    content: 'ADD ';
+    color: darkred;
+}
+
+.first-letter p::first-letter {
+    /* Modifica a primeira letra do elemento */
+    font-size: 50px;
+    font-family: serif;
+    margin: 0 10px;
+    /* Margem funciona assim usando 4 paramêtros, top . rigth . bottom . left*/
+}
+
+.inputs.placeholder .estilo::placeholder {
+    /* Modifica o placeholder */
+    color: red;
+}

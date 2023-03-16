@@ -1,0 +1,23 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 20px;
+    color: initial;
+    /* É usado para que quando for editado uma cor do elemento pai, não seja editado o filho junto*/
+    font-size: 35px;
+}
+
+.pai {
+    color: red;
+}
+
+.pai .filha {
+    /* Caminha por essas duas classes */
+    color: blue;
+}
+
+.pai .filha .filha.neta1, .pai .filha .filha.neta2 {
+    /* Caminhamos até a classe (filha neta1) para classes de 2 nomes chamamos dessa forma Ex: .filha.neta1 */
+    color: blueviolet;
+}
+

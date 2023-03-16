@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.hover .text {
+    transition: all 0.6s ease-in-out;
+    /* É usado para fazer uma transição com animação */
+    width: max-content;
+    /* max-content é usado para definir o tamanho no máximo do conteudo*/
+}
+
+.hover .text:hover {
+    color: red;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.hover~div {
+    /* Usei general siblings para usar a margem em todas as divs apenas depois da div class .hover*/
+    margin: 50px 0;
+}
+
+.links a:link {
+    /* É usado para links nunca visitados */
+    color: red;
+    text-decoration: none;
+}
+
+.links a:visited {
+    /* É usado para links já visitados */
+    color: rgb(255, 204, 93);
+}
+
+.links a:active {
+    /* É usado para quando está ativo, Ex: quando você clica e segura o elemento */
+    color: yellowgreen;
+    background-color: black;
+}
+
+.links a:hover {
+    color: rgb(133, 0, 0);
+}
+
+.focus .focus {
+    margin-left: 20px;
+}
+
+.focus .focus.pseudos-disabled:disabled {
+    /* Quando o elemento está desativado conseguimos configurar o elemento desabilitado, Ex input desativado*/
+    background-color: rgb(165, 165, 165);
+    cursor: not-allowed;
+}
+
+.focus .focus.pseudos:focus {
+    /* Ao clicar em um input por exemplo e ele estiver selecionado, ele ficara do jeito configurado abaixo */
+    border: solid black;
+    box-shadow: 5px 5px 6px rgba(59, 59, 59, 0.616);
+}
+
+.plus #plus, .plus p {
+    margin-left: 20px;
+}
+
+.plus #plus:checked + p {
+    /* O mais (+) é usado adicionar as configurações no elemento que vem após do (+) */
+    background-color: black;
+    color: #fff;
+}
+
+.not p:not(.meio) {
+    /* No not() a classe ou ID que colocarmos nele não será afetada pelas configurações abaixo, Ex not(.classe) */
+    color: blue;
+}
+
+.nth ul {
+    margin-left: 50px;
+    list-style-type: none;
+}
+
+.nth ul li:nth-child(even) {
+    /* NTH é usado para selecionar classes irmãos e fazer esse tipo de modificação nela, Neste exemplo selecionamos todas LI que forem par */
+    background-color: darkturquoise;
+}
+
+.nth ul li:nth-child(odd) {
+    background-color: darkolivegreen;
+}

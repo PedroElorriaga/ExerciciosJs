@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        label {
+            cursor: pointer;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#Enviado" method="get" autocomplete="off">
+        <h1>Formulário</h1>
+        <p>
+            <label for="nome">Nome: </label> <!-- For indica para quem é esse label que no Ex é o ID do input -->
+            <input type="text" nome="nome" id="nome" placeholder="Insira seu nome" required> <!-- Required é usado para dizer que tal
+                 campo é obrigatório -->
+        </p>
+
+        <p>
+            <label for="dev">Lembar de mim: </label>
+            <input type="checkbox" name="dev" id="dev" value="verdadeiro">
+        </p>
+
+        <p>
+            <label for="date">Data:</label>
+            <input type="date" name="date" id="date" readonly>
+        </p>
+
+        <p>
+            <label for="time">Tempo:</label>
+            <input type="time" name="time" id="time" value="10:00:00">
+        </p>
+
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="exemplo@outlook.com" required>
+        </p>
+        
+        <p>
+            <label for="file">Sua foto:</label>
+            <input type="file" name="file" id="file" accept=".png,.jpeg" multiple> <!-- Accept é os arquivos que o input aceita
+            O multiple deixa o input selecionar mais de um arquivo -->
+        </p>
+
+        <p>
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password" placeholder="Digite a senha">
+        </p>
+
+        <p>
+            <label for="range">Range:</label>
+            <input type="range" name="range" id="range" min="0" max="10"> <!-- Range é como se fosse a função de abaixar e aumentar o volume -->
+        </p>
+
+        <p>
+            <label for="textarea">Textarea:</label>
+            <textarea name="textarea" id="textarea" rows="10">
+            </textarea>
+        </p>
+
+        <p>
+            <label for="select">Selecione alguma opção</label>
+            <select id="select" name="select">
+                <option value="valores1">Valor1</option>
+                <option value="valores2">Valor2</option>
+                <option value="valores3">Valor3</option>
+                <option value="valores4">Valor4</option>
+            </select>
+        </p>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Resetar</button>
+    </form>
+</body>
+
+</html>

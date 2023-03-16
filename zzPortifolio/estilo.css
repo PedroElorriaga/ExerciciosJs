@@ -24,14 +24,14 @@ body {
     display: flex;
 }
 
-.menu a:hover {
+.menu ul a:hover {
     /* background-color: rgb(10, 10, 10, 0.5); */
     color: var(--third-color);
     border-radius: 5px;
     font-weight: bold;
 }
 
-.menu a {
+.menu ul a {
     text-decoration: none;
     color: #fff;
     padding: 20px 30px;
@@ -48,4 +48,6 @@ body {
 .logo img {
     width: 35px;
     height: 35px;
+    margin-left: 30px;
+    margin-right: 20px;
 }
