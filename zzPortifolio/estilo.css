@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 :root {
-    --main-color: rgb(104, 103, 103);
-    --menu-color: rgb(10, 10, 10, 0.3);
-    --third-color: rgb(10, 10, 10, 0.8);
+    --main-color: #1C2833;
+    --second-color: #0094ff;
+    --third-color: black;
     --gradiant-color: -webkit-linear-gradient(right, #aeaeae, #4d4b4b);
 }
 
@@ -14,19 +14,20 @@
 
 body {
     font-family: 'Nanum Gothic', sans-serif;
-    background: var(--gradiant-color)
+    background: url(https://images.hdqwalls.com/wallpapers/dark-clean-background-4k.jpg);
+    background-size: cover;
 }
 
 .menu {
     align-items: center;
     padding: 20px;
-    background-color: var(--menu-color);
+    /* background-color: var(--second-color); */
     display: flex;
 }
 
 .menu ul a:hover {
     /* background-color: rgb(10, 10, 10, 0.5); */
-    color: var(--third-color);
+    color: var(--second-color);
     border-radius: 5px;
     font-weight: bold;
 }
@@ -42,7 +43,7 @@ body {
 .menu ul {
     display: flex;
     list-style: none;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .logo img {
@@ -50,4 +51,61 @@ body {
     height: 35px;
     margin-left: 30px;
     margin-right: 20px;
+}
+
+.contanier {
+    color: #fff;
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    height: max-content;
+    padding: 30px;
+}
+
+.contanier .sobre-mim h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 15px 0;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: -100%;
+        width: -300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.contanier .sobre-mim h1 span {
+    color: #0094ff;
+}
+
+.btn {
+    margin: 15px 0;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn.baixar-cv{
+    background-color: var(--second-color);
+    color: #fff;
+}
+
+.btn a {
+    background: transparent;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn.baixar-cv:hover {
+    background-color: #013a63;
 }
