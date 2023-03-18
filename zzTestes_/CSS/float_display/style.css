@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.main .col {
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    margin: 10px 10px;
+    color: #fff;
+    font-size: 50px;
+    float: left;
+    /* É usado para fazer o elemento flutuar para o lugar apontado no parâmetro, Ex left ou right
+    e o elemento ocupa o espaço solicitado no width e height */
+
+    /* O Float faz com que os elementos não se sobrepoem como acontece normalmente no display block
+    Ex, definimos uma margem de 10px sem usar float, o espaçamento entre eles vão ficar em 10px
+    
+    Agora se usamos o float e definimos um espaçamento de 10px o espaçamento entre eles vão ficar de 20px
+    
+    Resumindo, float só vai ocupar o espaço dele e vai liberar o espaço restante para outros elementos */
+}
+
+p {
+    clear: both;
+    /* É usado para limpar os elementos do seu lado, Ex se tiver algum elemento na sua esquerda ou direita
+    ele vai quebrar uma linha e ser reproduzida em baixo */
+    margin: 10px 20px;
+}
+
+.main::after {
+    /* Este é um método onde o próprio elemento se limpa */
+    content: '';
+    display: block;
+    clear: both;
+}

@@ -1,0 +1,13 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    color: initial;
+    /* É usado para que quando for editado uma cor do elemento pai, não seja editado o filho junto*/
+    font-size: 35px;
+}
+
+.pai .um~.dois {
+    /* General sibling selector, seleciona todas classes .dois que vier dps de .um */
+    color: red;
+}

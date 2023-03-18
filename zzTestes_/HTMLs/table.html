@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 200%;
+        }
+
+        thead th {
+            background-color: #ddd;
+        }
+
+        table th,
+        table td {
+            border: 2px solid black;
+            border-collapse: initial;
+            padding: 5px;
+        }
+
+        caption {
+            caption-side: bottom;
+            text-align: right;
+            font-style: italic;
+            /* É usado para psicionar a descrição de uma tabela, Ex: bottom ou top*/
+        }
+
+        tfoot td {
+            background-color: #ddd;
+        }
+
+        .responsive-table {
+            /* Método responsivo de tabela */
+            max-width: 100%;
+            /* Largura máxima */
+            overflow-x: auto;
+            /* Overflow é tudo o que passar do tamanho máximo de largura, Ex: x é horizontal e y é vertical */
+        }
+
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="responsive-table">
+        <table>
+            <caption>Descrição da tabela</caption>
+            <thead>
+                <tr>
+                    <th>Título 1</th>
+                    <th>Título 2</th>
+                    <th>Título 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="2" style="text-align: center;">LINHA</td><!-- Colspan seleciona o tanto de colunas que ira ocupar
+                e rowspan seleciona o tanto de linhas ira ocupar -->
+                    <td>Corpo 3</td>
+                </tr>
+                <tr>
+                    <td>Corpo 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>RESULTADOS</td>
+                    <td>RESULTADOS</td>
+                    <td>RESULTADOS</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+
+</html>

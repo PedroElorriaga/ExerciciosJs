@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico"> <!--Icone do site na aba-->
+    <title>Netflix</title>
+    <style>
+        body {
+            background-image:
+                /* é usado para colocar uma imagem de fundo */
+                url(https://assets.nflxext.com/ffe/siteui/vlv3/5523db5a-e2b2-497f-a88b-61f175c3dbad/ab839420-28fa-41a0-80cf-c03b3b45903e/BR-pt-20230306-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+            background-size: cover; /* Tamanho do fundo, no caso o cover se ajusta ao tamanho da tela */
+        }
+
+        * {
+            /* Este elemento (*) é utilizado para selecionar tudo */
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu {
+            background: #0303038f;
+        }
+
+        #menu div {
+            display: flex;
+            /* Display flex é bom para criar colunas ex: Lado a lado */
+            justify-content: space-between;
+            /* O primeiro item é deslocado para o início do eixo principal,
+             o último é deslocado para o final do eixo principal */
+            width: 90%;
+            /* É o tamanho horizontal, no caso em porcentagem é
+             tanto que utiliza do body em porcentagem */
+            margin: 0 auto;
+            /* É a margem da div 0 é para altura e auto para largura Ex: auto deixa no meio*/
+        }
+
+        #menu .h1 {
+            /* ex: Estamos selecionando somente o h1 que está no menu */
+            font-size: 30px;
+            text-transform: uppercase;
+            /* É usado para deixar todas as letras maiúsculas */
+            padding: 15px;
+            /* É uma margin interna */
+        }
+
+        #menu a {
+            color: #fff;
+            font-family: sans-serif;
+            /* É usado para alterar a fonte */
+            text-decoration: none;
+            /* Tira a decoração do texto, que neste caso era o sublinhado */
+        }
+    </style>
+</head>
+
+<body>
+    <header id="menu">
+        <div>
+            <h1 class="h1">
+                <a href="">Netflix</a>
+            </h1>
+            <h2 class="h1">
+                <a href="">Entrar</a>
+            </h2>
+        </div>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    margin: 30px 0 20px 30px;
+    
+}
+
+header a {
+    text-decoration: none;
+    color: darkcyan;
+}
+
+header a:visited {
+    color: purple;
+}
+
+.contanier .textos .filho.alteravel::first-letter {
+    font-size: 30px;
+    margin: 0 10px;
+    font-family: serif;
+}
+
+.contanier {
+    color: red;
+    /* Alguns elementos do CSS utilizam a herança pai para modificar o que há dentro dela*/
+}
+
+.filho.nao-alteravel {
+    color: initial;
+    /* o parametro initial não deixa a classe filho ser alterada pelas configurações do pai */
+}

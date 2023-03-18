@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        .section-one {
+            background-color: purple;
+            color: #fff;
+            width: 200px;
+            height: 150px;
+            padding: 5px;
+            border: 5px solid black;
+            /* Border é utilizado para colocar uma borda ao redor do box, primeiro elemento é os pixels e depois o tipo e a cor */
+            text-align: center;
+            background-image: url(https://sm.ign.com/ign_br/screenshot/default/fortnite-battleroyale-blogroll-1522177042308_114011_6uux.jpg);
+            /* é usado para colocar uma imagem de fundo */
+            background-size: cover;
+            /* Tamanho do fundo, no caso o cover se ajusta ao tamanho da tela */
+            background-position: center center;
+            /* É usado para posicionar o fundo, primeiro elemento é a vertical e o segundo é a horixontal */
+            margin: 20px 5px;
+            /* primeiro elemento é */
+        }
+
+        .section-two {
+            background-color: aqua;
+            width: 200px;
+            height: 150px;
+            margin: 20px 5px;
+            padding: 5px;
+            color: #fff;
+            background-image: url(https://blog.br.playstation.com/tachyon/sites/4/2022/11/29224205561270b92c04055c8f0e7de3ee5cb5e4-scaled.jpg?resize=1088%2C612&crop_strategy=smart);
+            background-size: cover;
+            background-position: center center;
+            
+            
+            /* Forma de manipular as bordas individualmente */
+            border-style: solid;
+            border-width: 5px;
+            border-bottom-color: red;
+            border-top-color: rgb(248, 11, 248);
+            border-left-color: rgb(255, 142, 4);
+            border-right-color: rgb(0, 119, 255);
+            border-bottom-width: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section-one">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean erat mi, imperdiet sit
+        amet risus sit amet, euismod porttitor sem.
+        Curabitur eu arcu at enim mattis porta sed condimentum mi.</section>
+    <section class="section-two">Fusce vitae porttitor mauris. Ut a viverra libero. Vestibulum maximus ac ante ut commodo. 
+        Nunc finibus velit non eleifend mollis. Vivamus mattis tellus semper justo volutpat, id ornare sem luctus. 
+        Aliquam ut mi ut velit blandit imperdiet.</section>
+</body>
+
+</html>
