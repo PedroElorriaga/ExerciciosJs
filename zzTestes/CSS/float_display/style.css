@@ -4,11 +4,24 @@
     font-family: sans-serif;
 }
 
+.main::after {
+    /* Este é um método onde o próprio elemento se limpa */
+    content: '';
+    display: block;
+    clear: both;
+    /* É usado para limpar os elementos do seu lado, Ex se tiver algum elemento na sua esquerda ou direita
+    ele vai quebrar uma linha e ser reproduzida em baixo */
+}
+
+.main {
+    padding: 15px;
+}
+
 .main .col {
-    background-color: red;
-    width: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 33.33%;
     height: 300px;
-    margin: 10px 10px;
     color: #fff;
     font-size: 50px;
     float: left;
@@ -23,16 +36,13 @@
     Resumindo, float só vai ocupar o espaço dele e vai liberar o espaço restante para outros elementos */
 }
 
+.main .col-content {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
 p {
-    clear: both;
-    /* É usado para limpar os elementos do seu lado, Ex se tiver algum elemento na sua esquerda ou direita
-    ele vai quebrar uma linha e ser reproduzida em baixo */
     margin: 10px 20px;
 }
 
-.main::after {
-    /* Este é um método onde o próprio elemento se limpa */
-    content: '';
-    display: block;
-    clear: both;
-}

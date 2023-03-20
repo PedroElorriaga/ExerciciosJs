@@ -15,7 +15,8 @@
 body {
     font-family: 'Nanum Gothic', sans-serif;
     background: url(https://images.hdqwalls.com/wallpapers/dark-clean-background-4k.jpg);
-    background-size: cover;
+    background-size:contain;
+    height: 300vh;
 }
 
 .menu {
@@ -32,7 +33,7 @@ body {
     font-weight: bold;
 }
 
-.menu ul a {
+.menu ul li a {
     text-decoration: none;
     color: #fff;
     padding: 20px 30px;
@@ -86,26 +87,28 @@ body {
     color: #0094ff;
 }
 
-.btn {
-    margin: 15px 0;
-    border: none;
-    padding: 5px 30px;
-    border-radius: 5px;
+.donwload {
+    margin: 20px 0;
+}
+
+.btn.baixar-cv {
+    background-color: var(--second-color);
+    padding: 8px 30px;
+    border-radius: 10px;
     text-align: center;
     cursor: pointer;
 }
 
-.btn.baixar-cv{
-    background-color: var(--second-color);
-    color: #fff;
-}
-
-.btn a {
+ a {
     background: transparent;
     text-decoration: none;
     color: #fff;
 }
 
 .btn.baixar-cv:hover {
+    background-color: #013a63;
+}
+
+.btn.baixar-cv:active {
     background-color: #013a63;
 }
