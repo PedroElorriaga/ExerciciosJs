@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 300vh;
+}
+
+nav {
+    background-color: gray;
+    color: #fff;
+    font-family: sans-serif;
+    position: fixed;
+    width: 100%;
+}
+
+header {
+    margin: 0 auto;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.6s ease-in-out;
+}
+
+.menu ul li {
+    box-sizing: border-box;
+    padding: 20px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu ul li:hover {
+    background-color: rgba(0, 0, 0, 0.345)
+}
+
+.home {
+    background-color: rgb(218, 217, 217);
+    height: 33.33%;
+    padding-top: 65px;
+}
+
+.home .content {
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home .content .content.centralizando {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: red;
+    height: 400px;
+}
+
+.home .content .content-2 {
+    background-color: aliceblue;
+    height: 300px;
+    max-width: 700px;
+    margin: 200px auto;
+}
+
+.saiba-mais {
+    background: transparent;
+    height: 33.33%;
+    padding-top: 65px;
+}
+
+.saiba-mais .content {
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.saiba-mais .content .content-2 {
+    background-color: aliceblue;
+    height: 500px;
+    max-width: 700px;
+    margin: 200px auto;
+}
+
+.contato {
+    background-color: rgb(218, 217, 217);
+    height: 37%;
+    padding-top: 65px;
+}
+
+.contato .content {
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contato .content .content-2 {
+    background-color: aliceblue;
+    height: 500px;
+    max-width: 700px;
+    margin: 200px auto;
+}

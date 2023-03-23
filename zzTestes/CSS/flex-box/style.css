@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-contanier {
+    /*
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+    Essas são as configurações iniciais do Flex-Box = display flex*/
+
+    /*Flex-wrap: wrap;
+    é usado para não criar um overflow, ex ele permite que o elemento
+    quebre a linha para caber o conteúdo dentro dele*/
+
+    /*Alling-content: ;
+    é utilizado para alinhar o conteúdo*/
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /*Alinha no eixo principal*/
+    align-items: stretch;
+    /*Alinha no eixo perpendicular*/
+    background: yellowgreen;
+    height: 500px;
+}
+
+.flex-item {
+    background: darkgreen;
+}

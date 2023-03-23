@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.grid {
+    display: grid;
+    height: 200px;
+    max-width: 900px;
+    margin: 0 auto;
+
+    /* grid-template-columns: 50% 50%; */
+    /* cada parametro é uma coluna, ou seja o ex utilizado elas foram divididas
+    Podemos usar o repeat() para passar dimensões, isso é utilizavel
+    quando temos muitas dimensões, Ex: repeat(3, 1fr)*/
+
+    gap: 20px;
+    /* é um espaçamento*/
+
+    /*Exemplo responsivo*/
+
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.grid div {
+    background: tomato;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 50px auto;
+    max-width: 900px;
+    height: 200px;
+}
+
+.grid-2 div {
+    background: darkkhaki;
+}
+
+.grid-2 div:nth-child(8) {
+    background: darkred;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
