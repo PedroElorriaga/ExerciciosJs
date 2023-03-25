@@ -1,0 +1,241 @@
+:root {
+    --primary-color: #0A1128;
+    --color-white: #fff;
+    --ligth-gay-color: #eee;
+    --gap: 8rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* font-family: 'Montserrat', sans-serif;
+   font-family: 'Open Sans', sans-serif; */
+
+html {
+    font-size: 72.5%;
+    scroll-behavior: smooth;
+    /* Isso faz com que quando clicar em um link que redimensiona
+    para a mesma página ela rola de forma suave*/
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    /*Espaçamento das linhas*/
+}
+
+.main-bg {
+    /*Aqui criamos uma classe que até o momento não está HTML e se quisermos usar, basta apenas colocar
+    ela em alguma tag */
+    background-image: url(../img/main-bg.svg);
+    background-position: center center;
+    color: var(--color-white);
+}
+
+.white-bg {
+    color: black;
+    background: #fff;
+}
+
+.white-bg h2 {
+    color: var(--primary-color);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.section {
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    border-bottom: 0.1rem solid var(--ligth-gay-color);
+    z-index: 99999;
+    /*Sobrepoem todos elementos*/
+
+    top: 0;
+    left: 0;
+    /* Esses dois elementos eu sempre deixo o menu acima da pagina */
+}
+
+.menu h1 {
+    font-size: 2.5rem;
+}
+
+.menu h1 a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    display: block;
+    /*Display block para ajustar para que possamos
+    ajustar a ul, a partir do a */
+    color: var(--primary-color);
+    margin-left: 3rem;
+    padding: 1.2rem;
+    position: relative;
+    /*PAI*/
+    /*Relative foi utilizado para que quando utilizarmos o after
+    esse elemento aqui seja o pai e o after seja o filho*/
+}
+
+.menu ul li a::after {
+    /* Aqui estamos criando um efeito para os links*/
+    content: '';
+    position: absolute;
+    /*FILHO*/
+    bottom: 0.7rem;
+    /* Espaçamento de baixo */
+    left: 50%;
+    /* Espaçamento da esquerda */
+    width: 0;
+    /* Tamanho em relação ao link */
+    height: 0.2rem;
+    /* Tamanho do elemento, ex aqui foi grossura */
+    background: crimson;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    left: 25%;
+    /* de 50% foi pra 25% espaçamento */
+    width: 50%;
+    /* de 0 foi para 50%*/
+}
+
+.menu-spacing {
+    /* Classe de espaçamento */
+    height: 59px;
+}
+
+.home-content {
+    position: relative;
+    top: -8rem;
+    /*Distanciamento do topo, é ativo quando passa algum position*/
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap) 18rem;
+    min-height: 100vh;
+}
+
+.home-text,
+.home-img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* Aqui ele muda a direção do flex pelo column e não permite que a coluna se quebre*/
+    justify-content: center;
+}
+
+.home-text h2 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.home-img img {
+    max-width: 100%;
+    /* 100% da largura do pai do elemento class="home-img" */
+    height: auto;
+    /* Ajuste automatico da altura em relação ao pai*/
+}
+
+.intro-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* Aqui ele muda a direção do flex pelo column e não permite que a coluna se quebre*/
+    justify-content: center;
+    align-items: center;
+    max-width: 70rem;
+    text-align: center;
+}
+
+.intro-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+.top3-content h2 {
+    margin-bottom: 0.5rem;
+}
+
+.top3-content .top3.head {
+    margin-bottom: 6rem;
+}
+
+.top3-content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* Aqui ele muda a direção do flex pelo column e não permite que a coluna se quebre*/
+    justify-content: center;
+    max-width: 70rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    counter-reset: grid-content;
+}
+
+.grid h3 {
+    font-size: 2rem;
+}
+
+.grid h3::before {
+    font-size: 2rem;
+
+    counter-increment: grid-content;
+    content: counter(grid-content);
+    /*Adicionamos um contador, lembrando que utilizamos um 
+    counter reset no .grid */
+
+    margin-right: 1.5rem;
+}
