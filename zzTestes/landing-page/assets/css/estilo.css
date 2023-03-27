@@ -1,7 +1,7 @@
 :root {
     --primary-color: #0A1128;
     --color-white: #fff;
-    --ligth-gay-color: #eee;
+    --ligth-gray-color: #eee;
     --gap: 8rem;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .main-content {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: var(--gap);
 }
@@ -71,7 +71,7 @@ h1 {
 .menu {
     position: fixed;
     width: 100%;
-    border-bottom: 0.1rem solid var(--ligth-gay-color);
+    border-bottom: 0.1rem solid var(--ligth-gray-color);
     z-index: 99999;
     /*Sobrepoem todos elementos*/
 
@@ -148,7 +148,7 @@ h1 {
 
 .home-content {
     position: relative;
-    top: -8rem;
+    top: -2rem;
     /*Distanciamento do topo, é ativo quando passa algum position*/
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -158,7 +158,7 @@ h1 {
 
 .home-text,
 .home-img {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     flex-wrap: nowrap;
     /* Aqui ele muda a direção do flex pelo column e não permite que a coluna se quebre*/
@@ -238,4 +238,116 @@ p {
     counter reset no .grid */
 
     margin-right: 1.5rem;
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 30rem;
+    overflow: hidden;
+    max-height: 30rem;
+}
+
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2);
+}
+
+.preco-content {
+    min-height: 100vh;
+    max-width: 70rem;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 40rem;
+}
+
+table caption {
+    font-style: italic;
+    text-align: left;
+}
+
+table td, table th {
+    border: 0.1rem solid var(--ligth-gray-color);
+    padding: 1rem;
+}
+
+tfoot td, thead th {
+    background: var(--ligth-gray-color);
+    color: var(--primary-color);
+}
+
+.responsive-table {
+    margin-top: 5rem;
+    overflow-x: auto;
+}
+
+.contact-form {
+    grid-column: span 2;
+}
+
+.contact-form .form-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: none;
+    display: flex;
+    gap: var(--gap);
+}
+
+.form-group {
+    flex: 1 1 320px;
+}
+
+.form-group label {
+    text-transform: capitalize;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    box-sizing: border-box;
+    border: none;
+    background: var(--ligth-gray-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+}
+
+div.full-width {
+    flex: 1 1 100%;
+}
+
+.contact-main-margin .home-text {
+    margin-top: 8rem;
+}
+
+.form-group button {
+    border: 0.5rem solid var(--ligth-gray-color);
+    background: var(--color-white);
+    color: var(--primary-color);
+    padding: 0.9rem 2rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    border-radius: 3px;
+}
+
+.form-group button:hover {
+    border: 0.5rem solid var(--ligth-gray-color);
+    background: var(--ligth-gray-color);
+    color: var(--primary-color);
+    padding: 0.9rem 2rem;
+    cursor: pointer;
+}
+
+.footer-content {
+    display: flex;
+    background: var(--ligth-gray-color);
+    min-height: 10vh;
+    align-items: center;
+    justify-content: center;
 }
