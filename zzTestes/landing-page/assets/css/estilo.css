@@ -148,12 +148,13 @@ h1 {
 
 .home-content {
     position: relative;
-    top: -2rem;
+    top: -10rem;
     /*Distanciamento do topo, é ativo quando passa algum position*/
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: var(--gap) 18rem;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
     min-height: 100vh;
+    align-items: center;
 }
 
 .home-text,
@@ -166,7 +167,7 @@ h1 {
 }
 
 .home-text h2 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     margin-bottom: 2rem;
     line-height: 1.2;
 }
@@ -273,12 +274,14 @@ table caption {
     text-align: left;
 }
 
-table td, table th {
+table td,
+table th {
     border: 0.1rem solid var(--ligth-gray-color);
     padding: 1rem;
 }
 
-tfoot td, thead th {
+tfoot td,
+thead th {
     background: var(--ligth-gray-color);
     color: var(--primary-color);
 }
@@ -332,7 +335,7 @@ div.full-width {
     color: var(--primary-color);
     padding: 0.9rem 2rem;
     cursor: pointer;
-    transition: all 300ms ease-in-out;
+    transition: all 200ms ease-in-out;
     border-radius: 3px;
 }
 
@@ -350,4 +353,34 @@ div.full-width {
     min-height: 10vh;
     align-items: center;
     justify-content: center;
+    font-style: italic;
+}
+
+
+.contact-main-margin .home-img {
+    margin-top: 10rem;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .home-content,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-content {
+        top: 0rem;
+    }
+
+    .gallery-img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .gallery-img img {
+        width: 100%;
+    }
 }
