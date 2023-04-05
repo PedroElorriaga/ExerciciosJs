@@ -14,6 +14,8 @@ function criaTarefa(tarefaInput) {
     li.innerText = tarefaInput;
     exibeTarefa.appendChild(li);
     limpaInput()
+    botaoApagar(li)
+    salvarTarefas()
 };
 
 // TECLA ENTER ADICIONA TAREFA
@@ -37,3 +39,54 @@ function limpaInput() {
     pegarTarefa.value = ''
     pegarTarefa.focus()
 }
+
+// BOTÃO DE APAGAR TASK
+function botaoApagar(li) {
+    li.innerText += ' '
+    const btnApagar = document.createElement('button')
+    btnApagar.innerText = 'Deletar'
+    btnApagar.setAttribute('class', 'delete')
+    btnApagar.setAttribute('title', 'Apagar está tarefa') // Cria um atributo
+    li.appendChild(btnApagar)
+}
+
+// DELETA A TASK
+document.addEventListener('click', function (e) {
+    const el = e.target // MOSTRA ONDE ESTÁ SENDO CLICADO
+
+    if (el.classList.contains('delete')) { // VERIFICA SE EXISTE ESSA classe existe
+        el.parentElement.remove() // DELETA O PAI DO ELEMENTO DELETE
+    }
+
+    salvarTarefas()
+})
+
+
+
+// STRING --> JSON
+function salvarTarefas(){
+    const task = exibeTarefa.querySelectorAll('li')
+    const listaDeTarefas = []
+
+    for (let tarefa of task) {
+        let tarefaTexto = tarefa.innerText
+        tarefaTexto = tarefaTexto.replace('Deletar', '').trim() // TRIM REMOVE O ESPAÇO QUE SOBRA AO TIRAR O DELETAR
+        // TIRA A PALAVRA DELETAR 
+        listaDeTarefas.push(tarefaTexto)
+    }
+
+    const tarefasJson = JSON.stringify(listaDeTarefas)
+    localStorage.setItem('tarefas', tarefasJson)
+}
+
+// JSON --> STRING
+function adicionaTarefasSalvas() {
+    const tarefas = localStorage.getItem('tarefas')
+    const listaDeTarefas = JSON.parse(tarefas)
+
+    for (let tarefa of listaDeTarefas) {
+        criaTarefa(tarefa)
+    }
+}
+
+adicionaTarefasSalvas()

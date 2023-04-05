@@ -7,6 +7,6 @@ console.log(resto)
 
 console.log()
 
-const [primeiro_valor, ,terceiro_valor,...resto_ex2] = lista
+const [primeiro_valor, segundo_valor ,terceiro_valor,...resto_ex2] = lista
 
 console.log(primeiro_valor, terceiro_valor, ...resto_ex2) // Percebe que aqui pulamos o segundo valor apenas deixando um espaço
