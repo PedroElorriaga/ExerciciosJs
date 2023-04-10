@@ -13,6 +13,7 @@ function iniciaCalculadora() {
 
         getButtons() {
             document.addEventListener('click', (e) => {
+                // console.log(e) PARA VER OS PARAMETROS
                 const el = e.target
 
                 if (el.classList.contains('btn-num')) {
