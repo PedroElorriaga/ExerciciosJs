@@ -54,7 +54,7 @@ function Calculadora() {
             this.display.value = eval(operacao)
         } catch (e) {
             alert('CONTA INVÁLIDA')
-            limparInput() 
+            this.display.focus()
         }       
     }
 }
