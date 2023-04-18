@@ -9,7 +9,15 @@ const pessoas =[
     {   nome: 'Luan', idade: 23   }
 ]
 
+
+
+
 // A SINTAX DO MAP É IGUAL A DO FILTER
+// callback(valor, indice, array)
+
+
+
+
 
 // EXIBINDO APENAS O NOME
 const onlyNome = pessoas.map((obj) => {

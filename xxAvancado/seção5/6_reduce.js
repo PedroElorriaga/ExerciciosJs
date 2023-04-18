@@ -1,5 +1,18 @@
 // REDUCE TENTA COLOCAR TODO VALOR DO ARRAY EU UM UNICO INDICE
-// SINTAX DO REDUCE(ACUMULADOR, VALOR, INDICE, ARRAY)
+
+
+
+
+
+
+// SINTAX DO REDUCE(VALORANTERIOR, VALORATUAL, INDICE, ARRAY)
+
+
+
+
+
+
+
 
 const valores = [10, 30, 2, 3, 6, 7, 8, 11, 35]
 
@@ -50,12 +63,13 @@ const maisVelha = pessoas.reduce((acumulador, valor) => {
 })
 
 console.log(maisVelha)
-console.log()
+console.log('---------------------------')
 
-
-// ENTENDENDO 
-const entendendoReduce = pessoas.reduce((acumulador, valor) => {
-    return `${acumulador.idade} ${valor.nome}`
+const entendendoReduce = pessoas.reduce((prevValue, currentValue) => {
+    console.log('valorPrev', prevValue.nome)
+    console.log('valorCurrent', currentValue.nome)
+    if (prevValue.idade < currentValue.idade) return prevValue
+    return currentValue
 })
 
 console.log(entendendoReduce)

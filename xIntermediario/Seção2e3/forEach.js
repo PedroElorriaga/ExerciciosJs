@@ -7,7 +7,7 @@ let players = [
 // O metodo forEach ele busca pelo nome da chave informada todos os valores nela
 
 // Método sem Arrow Function
-/*
+
 let valoresNomes = []
 
 players.forEach(function (item){
@@ -15,7 +15,7 @@ players.forEach(function (item){
 });
 
 console.log(valoresNomes)
-*/
+
 
 
 // Método com Arrow function

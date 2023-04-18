@@ -1,4 +1,10 @@
 // COMO FILTRAR ELEMTNOS DO ARRAY
+
+
+
+
+
+
 // SINTAX DO FILTER filter CHAMA UMA FUNÇÃO callback QUE PODE CONTER OS SEGUINTES VALORES callback(valor, indice, array)
 // filter(callback)
 
