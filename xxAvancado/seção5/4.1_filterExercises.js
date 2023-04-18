@@ -21,3 +21,4 @@ const pessoasFilterEndsA = pessoas.filter((obj) => {
     //  E endsWith('a') PEGA SOMENTE OS VALORES QUE TERMINAM COM A LETRA a
 })
 console.log(pessoasFilterEndsA)
+
