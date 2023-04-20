@@ -1,3 +1,7 @@
+
+// É NECESSARIO COMEÇAR COM LETRAS MAIÚSCULAS
+
+
 function Pessoa(nome, sobrenome) {
     // PODEMOS CRIAR VARIAVEIS PRIVADAS
     const variavelPrivada = 'Valor Exemplo'
