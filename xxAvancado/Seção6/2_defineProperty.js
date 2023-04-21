@@ -1,6 +1,6 @@
 
 
-// sintax  Object.defineProperty(objeto, 'variavel' {configurações})
+// sintax  Object.defineProperty(objeto, 'nomeChave' {configurações})
 
 
 
