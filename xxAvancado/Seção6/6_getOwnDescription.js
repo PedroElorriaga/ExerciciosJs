@@ -1,9 +1,9 @@
-// OBJECT.GETOWNPROPERTYDESCRIPTOR(NOME DA VARIAVEL, 'objeto') PEGA A DESCIÇÃO DAS CONFIGURAÇÕES
+// OBJECT.GETOWNPROPERTYDESCRIPTOR(NOME DA VARIAVEL, 'objeto') PEGA A DESCRIÇÃO DAS CONFIGURAÇÕES
 
 
 const produtos = {
-    produto: 'Caneca',
-    valor: 30
+  produto: 'Caneca',
+  valor: 30
 }
 console.log(Object.getOwnPropertyDescriptor(produtos, 'produto'))
 // RETORNA 
@@ -14,9 +14,9 @@ console.log(Object.getOwnPropertyDescriptor(produtos, 'produto'))
   configurable: true
 } */
 
-
+// MUDA AS CONFIGURAÇÕES 
 Object.defineProperty(produtos, 'produto', {
-    writable: false
+  writable: false
 })
 console.log(Object.getOwnPropertyDescriptor(produtos, 'produto'))
 // RETORNA

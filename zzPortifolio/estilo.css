@@ -123,6 +123,11 @@ section {
     margin: auto 0;
 }
 
+.text span {
+    color: var(--second-color);
+    font-weight: bold;
+}
+
 .text h1 {
     text-transform: uppercase;
     font-weight: bold;
@@ -130,36 +135,68 @@ section {
 
 .text p {
     margin-top: 2rem;
+    letter-spacing: 2px;
+}
+
+.text .first-animation {
+    animation: fadeIn 1s linear;
+}
+
+.text .seg-animation {
+    animation: fadeIn 1.8s linear;
+}
+
+.text .third-animation {
+    animation: fadeIn 2.8s linear;
+}
+
+.text .btn-cv-a.third-animation {
+    animation: fadeIn 3s linear;
 }
 
 .desenho {
-    margin: auto 0;
+    margin: auto 50px;
 }
 
 .desenho img {
     max-width: 100%;
     width: 400px;
+    animation: fadeIn 3s linear;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .btn-cv {
-    margin-top: 4rem;
+    margin-top: 3rem;
     background: var(--second-color);
     text-align: center;
-    justify-content: center;
     width: 150px;
     height: 25px;
-    padding: 2px;
+    padding: 3px;
     border-radius: 3px;
     cursor: pointer;
     transition: all 300ms ease-in-out;
-}
-
-.btn-cv a {
-    text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     color: var(--third-color);
 }
 
+.btn-cv-a {
+    text-decoration: none;
+}
+
+.btn-cv-a .btn-cv div {
+    justify-content: center;
+}
+
 .btn-cv:hover {
     background: #295885c4;
+    transform: scale(1.1);
 }
