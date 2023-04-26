@@ -5,7 +5,7 @@
 
 
 
-// SINTAX DO REDUCE(VALORANTERIOR, VALORATUAL, INDICE, ARRAY)
+// SINTAX DO REDUCE(ACUMULADOR, VALORATUAL, INDICE, ARRAY)
 
 
 
@@ -59,7 +59,7 @@ const pessoas = [
 
 const maisVelha = pessoas.reduce((acumulador, valor) => {
     if (acumulador.idade > valor.idade) return acumulador
-    return valor 
+    return valor
 })
 
 console.log(maisVelha)
