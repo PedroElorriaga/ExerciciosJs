@@ -5,7 +5,7 @@ const objetoLiteral = {
     produto: 'Nome do produto',
     valor: 'Valor do produto'
 }
-console.log(objetoLiteral) // RETORNA  produto: 'Nome do produto', valor: 'Valor do produto' }
+console.log(objetoLiteral) // RETORNA { produto: 'Nome do produto', valor: 'Valor do produto' }
 
 const produtoCopiadoSpread = { ...objetoLiteral }
 produtoCopiadoSpread.produto = 'Camisa Corinthians'
