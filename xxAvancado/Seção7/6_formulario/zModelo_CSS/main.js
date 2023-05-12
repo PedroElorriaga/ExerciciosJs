@@ -7,14 +7,14 @@ class Formulario {
 
     eventos() {
         this.formulario.addEventListener('submit', e => { // e Carrega o evento de Submit
-            console.log(e.target.action) // MOSTRA ONDE SERA REDIRECIONADO http://127.0.0.1:5500/ 
+            console.log(e) // MOSTRA ONDE SERA REDIRECIONADO http://127.0.0.1:5500/ 
             this.executarEventoDeEnvio(e)
         })
     }
 
     executarEventoDeEnvio(e) {
-        e.target.action = 'https://www.4devs.com.br/gerador_de_cpf' // CAMINHO DE ENVIO
-        e.preventDefault() // NÃO ENVIA O FORMULÁRIO
+        e.target.action = 'https://github.com/PedroElorriaga' // CAMINHO DE DESTINO
+        e.preventDefault() // NÃO ENVIA O FORMULÁRIO E NÃO RECARREGA A PÁGINA
         const verificarSeCampoValido = this.validacaoDeCampo()
 
         console.log(verificarSeCampoValido)
@@ -32,7 +32,7 @@ class Formulario {
         }
 
         for (let campo of this.formulario.querySelectorAll('.not-null')) {
-            const campoDoErro = campo.previousElementSibling.innerHTML // PEGO O VALOR DO IRMÃO ANTERIOR DO ULTIMO CAMPO
+            const campoDoErro = campo.previousElementSibling.innerHTML // PEGO O VALOR DO IRMÃO ANTERIOR AO ULTIMO ELEMENTO
 
             if (!campo.value) { // SE VALOR DO CAMPO ESTIVER VAZIO
                 this.criaErro(campo, `* Campo ${campoDoErro} não pode estar vázio`)
