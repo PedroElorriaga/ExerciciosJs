@@ -150,7 +150,7 @@ section {
     animation: fadeIn 2.8s linear;
 }
 
-.text .btn-cv-a.third-animation {
+.text .btn-cv-a.button-delay {
     animation: fadeIn 3s linear;
 }
 
