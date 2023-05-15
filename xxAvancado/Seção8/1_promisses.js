@@ -57,5 +57,6 @@ simulaDelay('Entrando na dados na base...', rand(1, 3))
     }).catch((err) => {
         console.log('Erro: ' + err)
         console.log('-'.repeat(100))
+
     })
 
