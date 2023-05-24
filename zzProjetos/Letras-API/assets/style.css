@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open sans', sans-serif;
+    background: rgba(0, 255, 255, 0.116);
+}
+
+section {
+    background: rgba(4, 243, 243, 0.171);
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    margin: 100px auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+h1 {
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+}
