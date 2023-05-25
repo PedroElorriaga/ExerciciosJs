@@ -1,8 +1,12 @@
 const express = require('express')
 const app = express()
 const routes = require('./routes') // IMPORTAÇÃO DE ROUTES
+const path = require('path')
 
 app.use(express.urlencoded({ extended: true }))
+
+app.set('views', path.resolve(__dirname, 'views'))
+app.set('view engine', 'ejs')
 
 app.use(routes) // UTILIZANDO ROUTES COMO PARAMETRO
 
