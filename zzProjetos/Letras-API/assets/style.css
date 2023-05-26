@@ -13,7 +13,7 @@ body {
 section {
     background: rgba(4, 243, 243, 0.171);
     width: 600px;
-    height: 600px;
+    height: auto;
     border-radius: 10px;
     margin: 100px auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -24,4 +24,22 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     font-size: 2em;
+}
+
+.pegar-informacoes {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.pegar-informacoes button {
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.resposta {
+    text-align: center;
+    margin: 5%;
+    font-weight: bold;
+    padding: 10%;
+    letter-spacing: 0.1em;
 }
