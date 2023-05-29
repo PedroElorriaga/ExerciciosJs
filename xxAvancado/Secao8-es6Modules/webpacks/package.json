@@ -1,0 +1,22 @@
+{
+  "name": "webpacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "runWebpack": "webpack -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "babel-loader": "^9.1.2",
+    "core-js": "^2.6.12",
+    "regenerator-runtime": "^0.13.11",
+    "webpack-cli": "^5.1.1",
+    "wepack": "^0.0.1"
+  }
+}
