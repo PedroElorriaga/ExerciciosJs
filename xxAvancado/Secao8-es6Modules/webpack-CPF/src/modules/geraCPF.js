@@ -10,6 +10,10 @@ export default class GeraCPF {
     gerarNovoCpf() {
         const numeroAleatiorio = this.rand()
         const gerarDigitos = String(ValidaCPF.gerarPrimeiroDigito(numeroAleatiorio))
-        return gerarDigitos
+        return this.cpfFormatado(gerarDigitos)
+    }
+
+    cpfFormatado(valor) {
+        return (valor.slice(0, 3) + '.' + valor.slice(3, 6) + '.' + valor.slice(6, 9) + '-' + valor.slice(9, 11))
     }
 }
