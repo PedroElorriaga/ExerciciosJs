@@ -4,7 +4,7 @@
 // VALIDADOR DE CPF 
 
 
-const usuarioInformandoCpf = '519.274.728-73'
+const usuarioInformandoCpf = '82192148732'
 
 function removerCaracteresNaoNumericos(cpfDoUsuario) {
     // ESSA EXPRESSÃO REGULAR VERIFICA O QUE NÃO FOR NUMERO ELE SUBSTITUI POR NADA (/\D/g)
