@@ -65,7 +65,6 @@ export default class ValidadorDeCpf {
 
 
         valor += segundoDigito
-        this.consultaFinal = true
         return valor
     }
 }
