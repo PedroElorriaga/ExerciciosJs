@@ -1,7 +1,13 @@
+import { tamanhoSenha } from "./main"
+
 export default class GeradorDeSenha {
     static rand(min, max) {
         const random = Math.random() * (max - min) + min
         return Math.floor(random)
+    }
+
+    static tamanhoDaSenha() {
+        console.log(tamanhoSenha.value)
     }
 
     static verificarCheckBox() {
@@ -12,43 +18,43 @@ export default class GeradorDeSenha {
 
                     //TODO CRIAR UMA LÓGICA PARA RETORNAR MAIS DE UMA FUNÇÃO
                     case 'chk-lowcase':
-                        return this.letraLowcase()
+                        this.tamanhoDaSenha()
+                        this.letraLowcase()
+                        continue
 
                     case 'chk-maiuscula':
                         this.letraUppercase()
-                        break
+                        continue
 
                     case 'chk-number':
                         this.numerosPassword()
-                        break
+                        continue
 
                     case 'chk-special':
                         this.specialPassword()
-                        break
+                        continue
 
                     default:
                         console.log('Nenhum')
-                        break
                 }
             }
         }
     }
 
     //TODO FAZER A CRIAÇÃO DAS FUNÇÕES CONFORME O ASCII
-
     static letraLowcase() {
-        return (String.fromCharCode(this.rand(65, 90))) 
+        return (String.fromCharCode(this.rand(97, 122)))
     }
 
     static letraUppercase() {
-        console.log('letraUppercase')
+        return (String.fromCharCode(this.rand(65, 90)))
     }
 
     static numerosPassword() {
-        console.log('numerosPassword')
+        return (String.fromCharCode(this.rand(30, 39)))
     }
 
     static specialPassword() {
-        console.log('specialPassword')
+        return (String.fromCharCode(this.rand(33, 47)))
     }
 }
