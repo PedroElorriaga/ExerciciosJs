@@ -11,6 +11,7 @@ export default class GeradorDeSenha {
     }
 
     static verificarCheckBox() {
+        const retornosDoSwitch = []
         const checkBox = document.querySelector('.chk-content').getElementsByTagName('input')
         for (let i = 0; i < checkBox.length; i++) {
             if (checkBox[i].checked) {
@@ -18,20 +19,19 @@ export default class GeradorDeSenha {
 
                     //TODO CRIAR UMA LÓGICA PARA RETORNAR MAIS DE UMA FUNÇÃO
                     case 'chk-lowcase':
-                        this.tamanhoDaSenha()
-                        this.letraLowcase()
+                        retornosDoSwitch.push(this.letraLowcase())
                         continue
 
                     case 'chk-maiuscula':
-                        this.letraUppercase()
+                        retornosDoSwitch.push(this.letraUppercase())
                         continue
 
                     case 'chk-number':
-                        this.numerosPassword()
+                        retornosDoSwitch.push(this.numerosPassword())
                         continue
 
                     case 'chk-special':
-                        this.specialPassword()
+                        retornosDoSwitch.push(this.specialPassword())
                         continue
 
                     default:
@@ -39,6 +39,7 @@ export default class GeradorDeSenha {
                 }
             }
         }
+        return retornosDoSwitch.join('')
     }
 
     //TODO FAZER A CRIAÇÃO DAS FUNÇÕES CONFORME O ASCII
@@ -51,7 +52,7 @@ export default class GeradorDeSenha {
     }
 
     static numerosPassword() {
-        return (String.fromCharCode(this.rand(30, 39)))
+        return (String.fromCharCode(this.rand(48, 57)))
     }
 
     static specialPassword() {
