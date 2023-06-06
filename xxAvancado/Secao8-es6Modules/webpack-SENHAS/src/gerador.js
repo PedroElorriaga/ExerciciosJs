@@ -6,43 +6,30 @@ export default class GeradorDeSenha {
         return Math.floor(random)
     }
 
-    static tamanhoDaSenha() {
-        console.log(tamanhoSenha.value)
-    }
-
     static verificarCheckBox() {
-        const retornosDoSwitch = []
-        const checkBox = document.querySelector('.chk-content').getElementsByTagName('input')
-        for (let i = 0; i < checkBox.length; i++) {
-            if (checkBox[i].checked) {
-                switch (checkBox[i].name) {
-
-                    //TODO CRIAR UMA LÓGICA PARA RETORNAR MAIS DE UMA FUNÇÃO
-                    case 'chk-lowcase':
-                        retornosDoSwitch.push(this.letraLowcase())
-                        continue
-
-                    case 'chk-maiuscula':
-                        retornosDoSwitch.push(this.letraUppercase())
-                        continue
-
-                    case 'chk-number':
-                        retornosDoSwitch.push(this.numerosPassword())
-                        continue
-
-                    case 'chk-special':
-                        retornosDoSwitch.push(this.specialPassword())
-                        continue
-
-                    default:
-                        console.log('Nenhum')
-                }
-            }
-        }
-        return retornosDoSwitch.join('')
+        const chkLowcase = document.querySelector('.chk-lowcase')
+        const chkUppercase = document.querySelector('.chk-maiuscula')
+        const chkNumber = document.querySelector('.chk-number')
+        const chkSpecial = document.querySelector('.chk-special')
+        const valorMax = tamanhoSenha.value
+        
+        return this.gerarSenha(valorMax, chkLowcase, chkUppercase, chkNumber, chkSpecial)
     }
 
-    //TODO FAZER A CRIAÇÃO DAS FUNÇÕES CONFORME O ASCII
+    static gerarSenha(qtd, letraMinuscula, letraMaiuscula, numeros, specials) {
+        const retornoPassword = []
+
+        for (let i = 0; i < qtd; i++) {
+            letraMinuscula.checked && retornoPassword.push(this.letraLowcase())
+            letraMaiuscula.checked && retornoPassword.push(this.letraUppercase())
+            numeros.checked && retornoPassword.push(this.numerosPassword())
+            specials.checked && retornoPassword.push(this.specialPassword())
+        }
+
+        return retornoPassword.join('').slice(0, qtd)
+    }
+
+    // FUNÇÕES CONFORME O ASCII
     static letraLowcase() {
         return (String.fromCharCode(this.rand(97, 122)))
     }
