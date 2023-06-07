@@ -2,7 +2,7 @@ const path = require('path'); // CommonJS
 
 module.exports = {
   mode: 'production',
-  entry: path.resolve(__dirname, 'src', 'frontend', 'main.js'),
+  entry: path.resolve(__dirname, 'frontend', 'main.js'),
   output: {
     path: path.resolve(__dirname, 'public', 'assets', 'js'),
     filename: 'bundle.js'
