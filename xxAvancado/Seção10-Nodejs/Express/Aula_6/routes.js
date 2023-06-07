@@ -1,7 +1,7 @@
 const express = require('express')
 const route = express.Router()
 // IMPORTAÇÕES DOS CONTROLLERS
-const homeController = require('./controllers/homeController')
+const homeController = require('./src/controllers/homeController')
 
 // PAGINA HOME
 route.get('/', homeController.paginaInicial)
