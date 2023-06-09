@@ -6,7 +6,7 @@ const path = require('path')
 app.use(express.urlencoded({ extended: true }))
 
 // ARQUIVO ESTATICO
-app.use(express.static(path.resolve(__dirname))) // <- CAMINHO ABSOLUTO
+app.use(express.static(path.resolve(__dirname, 'public'))) // <- CAMINHO ABSOLUTO
 // CAMINHO DIRETO -> './public'
 
 // CONFIGURAÇÃO DE VIEWS

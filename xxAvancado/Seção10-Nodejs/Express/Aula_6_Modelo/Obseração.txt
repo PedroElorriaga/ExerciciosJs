@@ -1,0 +1,19 @@
+Seguinte, Pedro do futuro...
+Neste modulo quebramos a cabeça tentando resolver um problema de carregamento de bundle.
+
+
+O problema era o seguinte, Quando estavamos utilizando o script nodemon e atualizavamos o
+Main.js, ele não era atualizado no Bundle.js e Bundle.js.map, caso algum dia no futuro isso
+aconteça novamente com você e você esteja em dúvida no que fazer... Faza as seguintes configurações ->
+
+Verifique se no arquivo Webpack.config o ENTRY e o OUTPUT estão configurados com o caminho correto,
+utilize o PATH.RESOLVE(__dirname) para te ajudar com o caminho,
+
+em seguida, confira se o arquivo estático do Server.js -> 
+Ex: app.use(express.static(path.resolve(__dirname, 'public'))), está configurado para o caminho do Bundle.js
+e verifique também se, o html puxa as configurações do Bundle.js
+
+OBS: Se acontecer um erro de modulo, verique se no script do html existe o elemento type="module",
+se não existir, coloque o mesmo.
+
+e por fim execute o Webpack antes do nodemon para atualizar o Bundle
