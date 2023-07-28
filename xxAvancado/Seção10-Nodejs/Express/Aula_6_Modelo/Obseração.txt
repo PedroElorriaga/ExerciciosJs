@@ -17,3 +17,13 @@ OBS: Se acontecer um erro de modulo, verique se no script do html existe o eleme
 se não existir, coloque o mesmo.
 
 e por fim execute o Webpack antes do nodemon para atualizar o Bundle
+
+
+
+VOLTANDO AO PRESENTE EM 10/07/23
+
+O erro estava no <script type="module" src="./assets/js/bundle.js"></script>
+
+onde ele não carregava rotas que tinham mais de uma direção ex: /home/index
+
+então a solução era simplesmente <script src="/assets/js/bundle.js"></script>
