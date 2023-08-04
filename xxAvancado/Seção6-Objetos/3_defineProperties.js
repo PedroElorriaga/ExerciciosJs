@@ -33,8 +33,8 @@ function Produtos(produto, preco, estoque) {
     })
 
     this.aumentarEstoque = (qtd) => {
-        console.log(`Estoque do produto ${this.produto} aumentou de -> ${this.estoque} para -> ${qtd}`)
-        this.estoque = 5
+        console.log(`Estoque do produto ${this.produto} aumentou de -> ${this.estoque} para -> ${qtd + this.estoque}`)
+        this.estoque += qtd;
     }
 }
 
