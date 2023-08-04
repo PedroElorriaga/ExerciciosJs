@@ -1,10 +1,10 @@
 import Sequelize from 'sequelize';
 import databaseConfig from '../config/database';
-import Aluno from '../models/Aluno';
+import Cliente from '../models/Cliente';
 
-const models = [Aluno];
+const models = [Cliente];
 
 const connection = new Sequelize(databaseConfig);
 
-models.forEach((model) => model.init(connection));
+models.forEach((dado) => dado.init(connection));
 // CONEXÃO
