@@ -19,10 +19,10 @@ function ObjetoProperties(produto, valor, estoque) {
 
     // DEIXANDO O VALOR EDITAVEL
     Object.defineProperty(this, 'estoque', {
-        enumerable: true, // MOSTRA A CHAVE ex: 'estoque'
-        value: estoque, // INDICA O VALOR QUE APARECERA
-        writable: true, // INDICA SE O VALOR É EDITAVEL
-        configurable: true // INDICA SE A PROPRIEDADE É CONFIGURAVEL
+        enumerable: true,
+        value: estoque,
+        writable: true,
+        configurable: true
     })
 }
 
