@@ -1,5 +1,9 @@
 import app from './app';
 
+require('dotenv').config();
+
+console.log(process.env.DATABASE_HOST);
+
 const port = 3001;
 
 app.listen(port, () => {
