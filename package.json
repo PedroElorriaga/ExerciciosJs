@@ -1,7 +1,20 @@
 {
   "dependencies": {
+    "express": "^4.18.2",
     "mongodb": "^5.6.0",
+    "nodemon": "^3.0.1",
     "validator": "^13.9.0",
     "webpack": "^5.84.1"
-  }
+  },
+  "name": "exerciciosjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {}
 }
