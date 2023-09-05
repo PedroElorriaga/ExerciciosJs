@@ -7,11 +7,14 @@ dotenv.config();
     de variáveis de ambiente do sistema operacional
 */
 
+console.log(process.env.MYSQL_HOST)
+
 const connection = mysql.createPool({
   host: process.env.MYSQL_HOST,
   user: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DB,
+  port: 3001
 });
 
 module.exports = connection;
