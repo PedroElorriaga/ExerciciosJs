@@ -5,10 +5,15 @@ const getAll = async () => {
     return tasks;
 }
 
-const insert = async (value) => {
-    const insertTask = await connection.execute(`INSERT INTO tasks (titulo, status, created_at) VALUES ("Pedrinho", "${value}", "2023")`);
+const insert = async (values) => {
+    // assigning multiple variables ou mais conhecido como destructuring
+    const {titulo, status} = values;
+    const query = `INSERT INTO tasks (titulo, status, created_at) VALUES (?, ?, ?)`;
 
-    return insertTask
+    const dateUTC = new Date(Date.now()).toLocaleString();
+
+    const insertTask = await connection.execute(query,[titulo, status, dateUTC]);
+    return insertTask;
 }
 
 module.exports = {

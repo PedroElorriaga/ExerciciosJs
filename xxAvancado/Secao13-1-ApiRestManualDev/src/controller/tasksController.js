@@ -6,8 +6,8 @@ exports.showTasks = async (req, res) => {
     res.json(tasks[0]);
 };
 
-exports.test = async (req, res) => {
-    const taskInsert = await taskModel.insert('OK');
+exports.creatTask = async (req, res) => {
+    await taskModel.insert(req.body);
 
-    res.json(taskInsert);
+    res.json({"Status": "Enviado"});
 };
