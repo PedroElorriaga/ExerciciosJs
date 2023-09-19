@@ -1,0 +1,46 @@
+Para utilizar o sequelize devemos instalar ele no npm
+
+**npm i sequelize**
+**npm i -D sequelize-cli**
+
+
+
+
+Devemos criar o **.sequelizerc** e configurar o modo de uso do mesmo
+
+
+
+
+Após a base de dados ser criada e configurada, podemos migrar alterações
+na base de dados:
+
+
+1 - Criar a tabela e Schema na base de dados
+
+**npx sequelize migration:create --name=nome**
+
+Depois sera criado um documento em database/migrations/nome_tabela, que é
+aonde colocaremos as informações que serão chaves de nossa tabela
+
+
+2 - Fazer a migração das configurações para o Schema na base de dados
+
+**npx sequelize db:migrate**
+
+
+
+Após a base de dados estar configurada, estar com o Schema definido e as
+tabelas criadas, agora iremos configurar o model
+
+Na pasta models, criaremos o nome da tabela no singular Ex: Tabela tem nome alunos,
+no model será Aluno.js
+
+1 - Criaremos e exportaremos uma classe com o nome do arquivo Ex: Aluno.js -> class Aluno
+e usaremos a estrutura igual a do models/Aluno.js
+
+
+2 - Em database criaremos um arquivo chamado index.js onde faremos a importação dos models
+para a conexão com sequelize, APENAS USE A ESTRUTURA DO database/index.js
+
+
+3 - Agora importaremos no app.js o src/database

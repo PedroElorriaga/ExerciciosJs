@@ -1,15 +1,34 @@
-import Cliente from '../models/Cliente';
+import Aluno from '../models/Aluno';
 
-class HomeController {
+class GetAllAlunos {
   async index(req, res) {
-    const novoCliente = await Cliente.create({
-      nome: 'Cassio',
-      sobrenome: 'Ramos',
-      email: 'cassio2012@hotmail.com',
-      idade: 34,
-    });
-    res.json(novoCliente);
+    const dadosAlunos = await Aluno.findAll();
+    res.json(dadosAlunos);
   }
 }
 
-export default new HomeController();
+class CreateAluno {
+  async index(req, res) {
+    const criarAluno = await Aluno.create(req.body);
+    res.json({ Status: 'Criado', corpo: { criarAluno } });
+  }
+}
+
+class UpdateAluno {
+  async index(req, res) {
+    const { id } = req.params;
+    const data = req.body;
+    const atualizarAluno = await Aluno.update({ data }, {
+      where: {
+        id,
+      },
+    });
+    res.json({ status: 'Atualizado!', atualizarAluno });
+  }
+}
+
+const getAllAlunos = new GetAllAlunos();
+const createAluno = new CreateAluno();
+const updateAluno = new UpdateAluno();
+
+export { getAllAlunos, createAluno, updateAluno };
