@@ -8,14 +8,14 @@ class GetAllAlunos {
 }
 
 class CreateAluno {
-  async index(req, res) {
+  async store(req, res) {
     const criarAluno = await Aluno.create(req.body);
     res.json({ Status: 'Criado', corpo: { criarAluno } });
   }
 }
 
 class UpdateAluno {
-  async index(req, res) {
+  async update(req, res) {
     const { id } = req.params;
     const data = req.body;
     const atualizarAluno = await Aluno.update({ data }, {

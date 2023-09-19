@@ -28,6 +28,12 @@ aonde colocaremos as informações que serão chaves de nossa tabela
 **npx sequelize db:migrate**
 
 
+Caso cometa algum erro basta executar
+**npx sequelize db:migrate:undo**
+
+que ele desfaz a ultima alteração
+
+
 
 Após a base de dados estar configurada, estar com o Schema definido e as
 tabelas criadas, agora iremos configurar o model
