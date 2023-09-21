@@ -1,0 +1,29 @@
+Json Web Token
+
+Para instalar rodamos o seguinte código
+
+npm i jsonwebtoken
+
+
+
+
+Depois devemos criar duas variaveis no .env
+
+Ex:
+TOKEN_SECRET=fsbboeurybandftay648484fd598955hhui
+TOKEN_EXPIRATION=3d
+
+
+
+Depois podemos criaremos um controller, rotas e app para o token
+
+
+
+Após criado podemos ver o exemplo que criamos em TokenController.json
+e após validarmos todas as informações, podemos agora gerar o token
+
+
+1 - importamos o JWT, import jwt from 'jsonwebtoken';
+
+
+2 - Criaremos o token -> const token = jwt.sign({ payloader }, secret.env , { Opções ex: expiresIn: expiracao.env });

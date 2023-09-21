@@ -46,8 +46,14 @@ export default class Usuario extends Model {
 
     // Ecryptação de senha
     this.addHook('beforeSave', async (usuario) => {
-      usuario.password_hash = await bcryptjs.hash(usuario.password, 8);
+      if (usuario.password) {
+        usuario.password_hash = await bcryptjs.hash(usuario.password, 8);
+      }
     });
     return this;
+  }
+
+  verificaHashDeSenha(password) {
+    return bcryptjs.compare(password, this.password_hash);
   }
 }

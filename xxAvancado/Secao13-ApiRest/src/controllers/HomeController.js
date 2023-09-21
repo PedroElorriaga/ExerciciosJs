@@ -1,20 +1,16 @@
 import Aluno from '../models/Aluno';
 
-class GetAllAlunos {
+class AlunosController {
   async index(req, res) {
     const dadosAlunos = await Aluno.findAll();
     res.json(dadosAlunos);
   }
-}
 
-class CreateAluno {
   async store(req, res) {
     const criarAluno = await Aluno.create(req.body);
     res.json({ Status: 'Criado', corpo: { criarAluno } });
   }
-}
 
-class UpdateAluno {
   async update(req, res) {
     const { id } = req.params;
     const data = req.body;
@@ -27,8 +23,4 @@ class UpdateAluno {
   }
 }
 
-const getAllAlunos = new GetAllAlunos();
-const createAluno = new CreateAluno();
-const updateAluno = new UpdateAluno();
-
-export { getAllAlunos, createAluno, updateAluno };
+export default new AlunosController();

@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import { getAllAlunos, createAluno, updateAluno } from '../controllers/HomeController';
+import AlunosController from '../controllers/HomeController';
 
 const router = new Router();
 
-router.get('/', getAllAlunos.index);
-router.post('/', createAluno.store);
-router.put('/:id', updateAluno.update);
+router.get('/', AlunosController.index);
+router.post('/', AlunosController.store);
+router.put('/:id', AlunosController.update);
 
 export default router;
