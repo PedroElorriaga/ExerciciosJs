@@ -13,6 +13,7 @@ class UsuarioController {
   async index(req, res) {
     try {
       const getAllUser = await Usuario.findAll();
+      console.log(req.userEmail, req.userId);
       return res.json(getAllUser);
     } catch (e) {
       return res.status(400).json({ erro: e.errors.map((err) => err.message) });
