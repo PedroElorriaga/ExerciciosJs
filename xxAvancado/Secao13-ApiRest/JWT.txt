@@ -26,7 +26,9 @@ e após validarmos todas as informações, podemos agora gerar o token
 1 - importamos o JWT, import jwt from 'jsonwebtoken';
 
 
-2 - Criaremos o token -> const token = jwt.sign({ payloader }, secret.env , { Opções ex: expiresIn: expiracao.env });
+payloader //é ondecontem informações do user, ex: id, email
+2 - Criaremos o token -> const token = jwt.sign({ payloader }, secret.env , 
+{ Opções ex: expiresIn: expiracao.env });
 
 
 3 - Criaremos um middleware e colocaremos informações sobre o jwt
