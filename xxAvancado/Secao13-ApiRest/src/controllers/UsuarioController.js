@@ -12,7 +12,7 @@ class UsuarioController {
 
   async index(req, res) {
     try {
-      const getAllUser = await Usuario.findAll();
+      const getAllUser = await Usuario.findAll({ attributes: ['id', 'nome', 'email'] });
       console.log(req.userEmail, req.userId);
       return res.json(getAllUser);
     } catch (e) {
@@ -23,8 +23,8 @@ class UsuarioController {
   async show(req, res) {
     try {
       const { id } = req.params;
-      const getPkUser = await Usuario.findByPk(id);
-      return res.status(200).json(getPkUser);
+      const { nome, email } = await Usuario.findByPk(id); // getPkUser
+      return res.status(200).json({ id, nome, email });
     } catch (e) {
       return res.status(400).json({ erro: e.errors.map((err) => err.message) });
     }
@@ -32,12 +32,7 @@ class UsuarioController {
 
   async update(req, res) {
     try {
-      const { id } = req.params;
-      if (!id) {
-        return res.status(400).json({
-          erro: ['Missing ID'],
-        });
-      }
+      const id = req.userId;
 
       const getPkUser = await Usuario.findByPk(id);
 
@@ -45,8 +40,10 @@ class UsuarioController {
         return res.status(400).json({ erro: ['Usuário não existe'] });
       }
 
-      const updateUser = await getPkUser.update(req.body);
-      return res.status(200).json(updateUser);
+      const { updated_at, nome, email } = await getPkUser.update(req.body);
+      return res.status(200).json({
+        id, updated_at, nome, email,
+      });
     } catch (e) {
       return res.status(400).json({ erro: e.errors.map((err) => err.message) });
     }
@@ -54,10 +51,7 @@ class UsuarioController {
 
   async delete(req, res) {
     try {
-      const { id } = req.params;
-      if (!id) {
-        return res.status(400).json({ erro: ['Missing ID'] });
-      }
+      const id = req.userId;
 
       const getByPk = await Usuario.findByPk(id);
 

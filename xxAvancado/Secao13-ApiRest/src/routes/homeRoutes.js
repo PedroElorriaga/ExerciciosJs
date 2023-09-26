@@ -5,6 +5,6 @@ const router = new Router();
 
 router.get('/', AlunosController.index);
 router.post('/', AlunosController.store);
-router.put('/:id', AlunosController.update);
+router.put('alunos/:id', AlunosController.update);
 
 export default router;
