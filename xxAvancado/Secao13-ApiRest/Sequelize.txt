@@ -50,3 +50,19 @@ para a conexão com sequelize, APENAS USE A ESTRUTURA DO database/index.js
 
 
 3 - Agora importaremos no app.js o src/database
+
+
+Criando SEEDS
+
+Seeds é utilizado bastante para colocar varias informações na base de dados para testes
+
+1 - para gerar um seed usaremos
+
+npx sequelize seed:generate --name nome
+
+2 - Será criado um arquivo seeds no databae/seeds/arquivo
+Use como exemplo o arquivo em questão
+
+3 - Para executar e adicionar os dados do seed na base de dados, executaremos o seguinte
+
+npx sequelize db:seed:all

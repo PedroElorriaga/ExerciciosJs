@@ -27,7 +27,7 @@ e após validarmos todas as informações, podemos agora gerar o token
 
 
 payloader //é ondecontem informações do user, ex: id, email
-2 - Criaremos o token -> const token = jwt.sign({ payloader }, secret.env , 
+2 - Criaremos o token -> const token = jwt.sign({ payloader }, secret.env ,
 { Opções ex: expiresIn: expiracao.env });
 
 
@@ -37,3 +37,5 @@ payloader //é ondecontem informações do user, ex: id, email
 
 OBS: Na linha 15 e 16 do middleware loginRequired colocamos req.userId = id; req.userEmail = email;
 eles salvam as informações dos usuário para que possam ser usados no controller a seguir
+
+5 - Depois colocaremos uma rota para cosneguir gerar um token
