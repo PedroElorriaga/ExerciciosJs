@@ -17,6 +17,10 @@ na base de dados:
 
 1 - Criar a tabela e Schema na base de dados
 
+OBS: As migrações são como um histórico, ele não deve ser apagado
+sempre que for alterar algo na estrutura da base de dados, devemos rodar
+uma nova migração
+
 **npx sequelize migration:create --name=nome**
 
 Depois sera criado um documento em database/migrations/nome_tabela, que é
@@ -66,3 +70,8 @@ Use como exemplo o arquivo em questão
 3 - Para executar e adicionar os dados do seed na base de dados, executaremos o seguinte
 
 npx sequelize db:seed:all
+
+ou
+
+npx sequelize db:seed --seed nome_arquivo
+para executar somente um seed

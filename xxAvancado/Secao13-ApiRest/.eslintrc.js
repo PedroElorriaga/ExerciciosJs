@@ -28,5 +28,6 @@ module.exports = {
     'no-param-reassign': 'off',
     'max-classes-per-file': 'off',
     camelcase: 'off',
+    'no-empty-function': 'off',
   },
 };
