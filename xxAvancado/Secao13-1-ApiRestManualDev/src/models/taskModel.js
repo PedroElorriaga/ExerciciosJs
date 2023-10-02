@@ -16,7 +16,14 @@ const insert = async (values) => {
     return insertTask;
 }
 
+const getOne = async (valueId) => {
+    const task = await connection.execute(`SELECT * FROM tasks WHERE id=${valueId}`)
+
+    return task;
+}
+
 module.exports = {
     getAll,
-    insert
+    insert,
+    getOne
 };

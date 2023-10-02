@@ -1,0 +1,18 @@
+Pra criar um Database usando comandos do SQL
+
+CREATE DATABASE IF NOT EXISTS nome_da_base
+    DEFAULT CHARACTER SET = 'utf8mb4';
+
+
+
+Para criar uma tabela
+
+USE nome_da_base;
+
+CREATE TABLE nome_da_tabela(
+    dados: Ex ->
+
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(255) NOT NULL,
+    status VARCHAR(45)
+);

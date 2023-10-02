@@ -6,5 +6,6 @@ const taskMiddleware = require('./src/middleware/tasksMiddleware');
 
 router.get('/tasks', taskController.showTasks);
 router.post('/tasks', taskMiddleware.validacaoEnvios, taskController.creatTask);
+router.get('/tasks/:id', taskController.getOneTask);
 
 module.exports = router;
