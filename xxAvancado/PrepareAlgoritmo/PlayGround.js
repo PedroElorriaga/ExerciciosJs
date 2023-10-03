@@ -8,5 +8,8 @@ function getDup(value) {
     return procurarDup
 }
 
-const arr = [5, 5, 3, 1, 2, 4]
+const arr = ['Carro', 'Moto', 'Caminhão', 'Lancha', 'Carro']
 console.log(getDup(arr))
+
+
+arr.filter((item, index, array) => console.log(index, array.indexOf(item)))

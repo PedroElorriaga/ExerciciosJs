@@ -46,7 +46,7 @@ Na pasta models, criaremos o nome da tabela no singular Ex: Tabela tem nome alun
 no model será Aluno.js
 
 1 - Criaremos e exportaremos uma classe com o nome do arquivo Ex: Aluno.js -> class Aluno
-e usaremos a estrutura igual a do models/Aluno.js
+e usaremos a estrutura igual a do models/Usuario.js
 
 
 2 - Em database criaremos um arquivo chamado index.js onde faremos a importação dos models
