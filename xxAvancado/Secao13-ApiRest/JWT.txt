@@ -6,7 +6,6 @@ npm i jsonwebtoken
 
 
 
-
 Depois devemos criar duas variaveis no .env
 
 Ex:
@@ -26,16 +25,16 @@ e após validarmos todas as informações, podemos agora gerar o token
 1 - importamos o JWT, import jwt from 'jsonwebtoken';
 
 
-payloader //é ondecontem informações do user, ex: id, email
+payloader //é onde contem informações do user, ex: id, email
+
 2 - Criaremos o token -> const token = jwt.sign({ payloader }, secret.env ,
 { Opções ex: expiresIn: expiracao.env });
 
-
 3 - Criaremos um middleware e colocaremos informações sobre o jwt
 
-4 - Podemos testar o jwt colocando o token que está no tokenController, no campo auth barrer do insomnia
+4 - Podemos testar o jwt colocando o token que está no tokenController, no campo auth barrer do insomnia ou postman
 
-OBS: Na linha 15 e 16 do middleware loginRequired colocamos req.userId = id; req.userEmail = email;
+OBS: Na linha 28 e 29 do middleware loginRequired colocamos req.userId = id; req.userEmail = email;
 eles salvam as informações dos usuário para que possam ser usados no controller a seguir
 
-5 - Depois colocaremos uma rota para cosneguir gerar um token
+5 - Depois criaremos uma rota para conseguir gerar um token

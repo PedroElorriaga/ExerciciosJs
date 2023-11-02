@@ -7,5 +7,4 @@ const models = [Aluno, Usuario];
 
 const connection = new Sequelize(databaseConfig);
 
-models.forEach((model) => model.init(connection));
-// CONEXÃO
+models.forEach((model) => model.init(connection)); // CONEXÃO

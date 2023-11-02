@@ -1,18 +1,17 @@
 Para utilizar o sequelize devemos instalar ele no npm
 
-**npm i sequelize**
-**npm i -D sequelize-cli**
+** npm i sequelize **
+** npm i -D sequelize-cli **
 
 
 
-
-Devemos criar o **.sequelizerc** e configurar o modo de uso do mesmo
-
+Devemos criar o ** .sequelizerc ** e configurar o modo de uso do mesmo
 
 
 
 Após a base de dados ser criada e configurada, podemos migrar alterações
 na base de dados:
+
 
 
 1 - Criar a tabela e Schema na base de dados
@@ -21,19 +20,20 @@ OBS: As migrações são como um histórico, ele não deve ser apagado
 sempre que for alterar algo na estrutura da base de dados, devemos rodar
 uma nova migração
 
-**npx sequelize migration:create --name=nome**
+** npx sequelize migration:create --name=nome **
 
 Depois sera criado um documento em database/migrations/nome_tabela, que é
 aonde colocaremos as informações que serão chaves de nossa tabela
 
 
+
 2 - Fazer a migração das configurações para o Schema na base de dados
 
-**npx sequelize db:migrate**
-
+** npx sequelize db:migrate **
 
 Caso cometa algum erro basta executar
-**npx sequelize db:migrate:undo**
+
+** npx sequelize db:migrate:undo **
 
 que ele desfaz a ultima alteração
 
@@ -58,18 +58,18 @@ para a conexão com sequelize, APENAS USE A ESTRUTURA DO database/index.js
 
 Criando SEEDS
 
-Seeds é utilizado bastante para colocar varias informações na base de dados para testes
+Seeds é bastante utilizado para colocar varias informações na base de dados para testes
 
 1 - para gerar um seed usaremos
 
-npx sequelize seed:generate --name nome
+** npx sequelize seed:generate --name nome **
 
 2 - Será criado um arquivo seeds no databae/seeds/arquivo
 Use como exemplo o arquivo em questão
 
 3 - Para executar e adicionar os dados do seed na base de dados, executaremos o seguinte
 
-npx sequelize db:seed:all
+** npx sequelize db:seed:all **
 
 ou
 
