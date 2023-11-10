@@ -1,3 +1,5 @@
+ABRA O CMD OU POWER SHELL COMO ADMIN
+
 netstat -a -n -o | findstr 3306
 
 Taskkill /PID <pid> /F

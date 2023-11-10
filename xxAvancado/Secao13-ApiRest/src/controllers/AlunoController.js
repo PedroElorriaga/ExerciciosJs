@@ -11,7 +11,7 @@ class AlunosController {
       const createAluno = await Aluno.create(req.body);
       return res.json(createAluno);
     } catch (e) {
-      return res.status(401).json({ erro: e.errors.map((err) => err.message) });
+      return res.status(401).json({ erro: e.parent.sqlMessage });
     }
   }
 
