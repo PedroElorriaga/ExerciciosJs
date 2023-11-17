@@ -10,6 +10,7 @@ class AlunosController {
     try {
       const createAluno = await Aluno.create(req.body);
       return res.json(createAluno);
+
     } catch (e) {
       return res.status(401).json({ erro: e.parent.sqlMessage });
     }
@@ -39,6 +40,7 @@ class AlunosController {
       await getOneAluno.update(req.body);
 
       return res.status(200).json({ STATUS: [`Aluno(a) ${getOneAluno.nome} foi atulizado com sucesso!`] });
+
     } catch (e) {
       return res.status(400).json({ erro: e.errors.map((err) => err.message) });
     }
@@ -52,10 +54,18 @@ class AlunosController {
         return res.status(401).json({ ERRO: ['Missing ID'] });
       }
 
-      const { nome, sobrenome, idade } = await Aluno.findByPk(id);
+      const aluno = await Aluno.findByPk(id);
+
+      if (!aluno) {
+        return res.status(400).json({ ERRO: ['Aluno(a) não existe'] });
+      }
+
+      const { nome, sobrenome, idade } = aluno;
+
       return res.status(200).json({ ALUNO: { name: nome, lastname: sobrenome, age: idade } });
+
     } catch (e) {
-      return res.status(400).json({ erro: e.errors.map((err) => err.message) });
+      return res.status(400).json({ erro: e });
     }
   }
 
@@ -76,6 +86,7 @@ class AlunosController {
       await deleteAluno.destroy();
 
       return res.status(200).json({ STATUS: [`Aluno(a) ${deleteAluno.nome} ${deleteAluno.sobrenome} foi excluido com sucesso!`] });
+
     } catch (e) {
       return res.status(400).json({ erro: e.errors.map((err) => err.message) });
     }

@@ -1,0 +1,33 @@
+Multer é uma biblioteca que soluciona ações quando manipulamos
+files ( Fotos, documentos, pdfs )
+
+Para utilizar instalamos a biblioteca
+
+
+** npm i multer **
+
+
+depois criamos uma pasta chamada uploads, onde vamos guardar
+os arquivos
+
+
+Agora na pasta de configs criaremos um arquivo chamado de multer.js
+
+
+** Pode usar o arquivo em questão como exemplo ou olhar a documentação
+no https://www.npmjs.com/package/multer **
+
+
+tambem devemos criar um controller para manipular os files, no caso 
+criei com nome de PhotoController
+
+Depois configuramos o router, que saimos um pouco do padrão, explicarei
+
+* Importamos o multer e importaremos o configs
+* Criaremos uma const de upload que carrega a função multer com a 
+config como parametro ex: multer(arquivoConfig)
+
+
+e depois incluirimos ele na rota como um middleware com o tipo de arquivo
+explicitando se será single ou files que usara o parametro de onde virá o
+arquivo, Ex: single('foto')
