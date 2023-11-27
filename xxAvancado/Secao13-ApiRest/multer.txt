@@ -21,13 +21,19 @@ no https://www.npmjs.com/package/multer **
 tambem devemos criar um controller para manipular os files, no caso 
 criei com nome de PhotoController
 
-Depois configuramos o router, que saimos um pouco do padrão, explicarei
+Depois configuramos controller, como no exemplo abaixo
 
-* Importamos o multer e importaremos o configs
-* Criaremos uma const de upload que carrega a função multer com a 
+* Importaremos o multer e importaremos o config
+* Criaremos uma const de upload que carrega a função multer, junto a 
 config como parametro ex: multer(arquivoConfig)
 
 
-e depois incluirimos ele na rota como um middleware com o tipo de arquivo
+e depois incluirimos ele com o tipo de arquivo
 explicitando se será single ou files que usara o parametro de onde virá o
-arquivo, Ex: single('foto')
+arquivo, Ex: .single('foto')
+
+
+Dando upload no postman:
+
+selecionei na aba body, o tipo de dado form-data e coloquei o nome da key
+com o mesmo nome do middleware do router Ex:("upload.single('photo')" -> "photo")
