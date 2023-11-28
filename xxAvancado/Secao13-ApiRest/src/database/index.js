@@ -8,5 +8,5 @@ const models = [Aluno, Usuario, Foto];
 
 const connection = new Sequelize(databaseConfig);
 
-models.forEach((model) => model.init(connection)); // CONEXÃO
-models.forEach((model) => model.associate && model.associate(connection.models));
+models.forEach((model) => model.init(connection)); // INICIA CONEXÃO DE CADA MODEL
+models.forEach((model) => model.associate && model.associate(connection.models)); // FAZ A CONEXÃO DE ASSOCIAÇÃO DE CADA MODEL

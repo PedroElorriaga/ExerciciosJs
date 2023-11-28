@@ -75,3 +75,28 @@ ou
 
 npx sequelize db:seed --seed nome_arquivo
 para executar somente um seed
+
+
+
+
+
+Utilizando FOREIGNKEY - FK com sequelize:
+
+1 - Você devera configurar no migrations a referência de qual tabela
+você irá usar a informação, como no exemplo em database/migrations/....Fotos
+
+references: {
+          model: 'alunos',
+          key: 'id',
+        },
+
+
+2 - Depois em models deveremos referenciar a FK, como no exemplo models/Fotos
+criando uma função statica onde fazemos a associação a tabela requerida
+
+
+3 - Agora devemos colocar o model no arquivo de inicialização da database 
+database/index.js
+
+
+4 - Apos isso, para utilizar do recurso, podemos usar o exemplo no index no AlunoController

@@ -14,12 +14,17 @@ class UsuarioController {
         });
       }
 
-      const { originalname, filename } = req.file;
-      const { aluno_id } = req.body;
+      try {
+        const { originalname, filename } = req.file;
+        const { aluno_id } = req.body;
 
-      const postPhoto = await Foto.create({ originalname, filename, aluno_id });
+        const postPhoto = await Foto.create({ originalname, filename, aluno_id });
 
-      return res.json(postPhoto);
+        return res.json(postPhoto);
+      } catch (e) {
+        return res.status(404).json({ erro: 'Usuário não existe' });
+      }
+
     });
   }
 }
