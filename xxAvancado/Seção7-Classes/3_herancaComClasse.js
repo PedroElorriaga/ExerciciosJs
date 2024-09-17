@@ -78,7 +78,8 @@ class Desenvolvedor extends HabilidadesDosFuncionarios {
 const funcionarioUm = new HabilidadesDosFuncionarios('Pedro', 'Elorriaga')
 funcionarioUm.iniciandoTrabalho()
 funcionarioUm.iniciandoTrabalho()
-console.log('Trabalhando? ' + funcionarioUm.trabalhando) // RETORNA Trabalhando? true
+const workingCondition = funcionarioUm.trabalhando ? 'Sim' : 'Não'
+console.log('Trabalhando? ' + workingCondition)
 
 
 // CRIANDO OBJETO DE HERANÇA

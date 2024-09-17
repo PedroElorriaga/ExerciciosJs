@@ -8,14 +8,15 @@ class Pessoa {
     }
 
     falar() {
-        console.log(`Atenção o Sr ${this.nome} ${this.sobrenome} está falando...`)
+        return `Atenção o Sr ${this.nome} ${this.sobrenome} está falando...`
     }
 
     anunciar() {
-        console.log(`Atenção o Sr ${this.nome} ${this.sobrenome} está anunciando...`)
+        return `Atenção o Sr ${this.nome} ${this.sobrenome} está anunciando...`
     }
 }
 
 const humanoUm = new Pessoa('Pedro', 'Elorriaga')
 
 console.log(humanoUm.falar())
+console.log(humanoUm.anunciar())

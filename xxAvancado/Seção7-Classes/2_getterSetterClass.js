@@ -1,4 +1,4 @@
-const _velocidade = Symbol('velocidade')
+const _velocidade = Symbol('velocidade') // Propriedade Privada     Symbol é tipo uma descrição mas sendo um Symbol único
 class Carro {
     constructor(modelo) {
         this.modelo = modelo
@@ -17,4 +17,4 @@ class Carro {
 const mercedes = new Carro('Mercedes')
 
 mercedes.velocidade = 20
-console.log(mercedes)
+console.log(mercedes.velocidade)
