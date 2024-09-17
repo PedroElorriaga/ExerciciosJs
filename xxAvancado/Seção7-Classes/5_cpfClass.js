@@ -25,7 +25,7 @@ class ValidadorDeCpf {
             return
         }
 
-        console.log(`CPF [${this.cpfDoUsuarioLimpo}] válido`)
+        console.log(`CPF ${this.cpfDoUsuarioLimpo.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4")} válido`)
     }
 
     removerDigitos() {
@@ -66,6 +66,6 @@ class ValidadorDeCpf {
     }
 }
 
-const pedroElorriagaCPF = new ValidadorDeCpf('519.274.728-80')
+const pedroElorriagaCPF = new ValidadorDeCpf('519.274.728-73')
 
 pedroElorriagaCPF.validaCPF()
