@@ -1,0 +1,19 @@
+<% if (errors.length> 0) { %>
+    <div class="alerta-centro erro">
+        <p class="error-message">
+            <% errors.forEach(erro=> { %>
+                <%= erro %><br>
+                    <% }) %>
+        </p>
+    </div>
+    <% } %>
+
+        <% if (success.length> 0) { %>
+            <div class="alerta-centro success">
+                <p class="success-message">
+                    <% success.forEach(success=> { %>
+                        <%= success %><br>
+                            <% }) %>
+                </p>
+            </div>
+            <% } %>

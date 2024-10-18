@@ -1,0 +1,28 @@
+{
+  "name": "nodeudemy",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "connect-mongodb-session": "^5.0.0",
+    "csurf": "^1.10.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.18.1",
+    "helmet": "^8.0.0",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

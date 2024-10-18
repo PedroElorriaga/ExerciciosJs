@@ -1,0 +1,22 @@
+<%- include('./includes/head.ejs') %>
+
+    <body>
+        <section class="formulario">
+            <%- include('./includes/flashMessage.ejs') %>
+                <form action="/create/user" method="post">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <div>
+                        <label for="username" name="username">Username</label>
+                        <input type="text" name="username" placeholder=<%=cookie %>>
+                    </div>
+                    <div>
+                        <label for="city" name="city">Cidade</label>
+                        <input type="text" name="city" placeholder="São Paulo">
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+        </section>
+
+        <%- include('./includes/footer.ejs') %>

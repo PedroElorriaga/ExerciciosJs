@@ -1,0 +1,17 @@
+<%- include('./includes/head.ejs') %>
+
+    <body>
+        <section class="formulario">
+            <form action="/forms" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <div>
+                    <label for="username" name="username">Username</label>
+                    <input type="text" name="username" placeholder=<%=cookie %>>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </section>
+
+        <%- include('./includes/footer.ejs') %>

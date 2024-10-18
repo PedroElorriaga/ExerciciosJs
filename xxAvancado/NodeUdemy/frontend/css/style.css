@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.formulario {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulario form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgb(247, 240, 233);
+    height: 20vh;
+    width: 60vh;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 4px 4px rgba(211, 211, 211, 0.418);
+}
+
+.formulario div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.formulario input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    width: 200px;
+    outline: unset;
+    border: solid white 1px;
+    box-shadow: 2px 1px rgba(211, 211, 211, 0.418);
+}
+
+.formulario input[type="text"].error {
+    border: 2px solid rgb(252, 100, 100);
+}
+
+.formulario input:focus {
+    background-color: aliceblue;
+    border: solid aliceblue 1px;
+}
+
+.formulario input[type="submit"] {
+    padding: 5px;
+    border-radius: 10px;
+    outline: unset;
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    cursor: pointer;
+    width: 200px;
+    box-shadow: 2px 1px rgba(211, 211, 211, 0.418);
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: rgb(209, 232, 252);
+    border: 1px solid rgb(209, 232, 252);
+}
+
+.formulario div label {
+    margin-left: 2px;
+    padding: 2px;
+}
+
+
+/* FLASH MESSAGES */
+.alerta-centro.erro {
+    background-color: rgba(250, 128, 114, 0.315);
+    width: 60vh;
+    height: 4em;
+    border: 1px solid rgba(250, 128, 114, 0.452);
+    border-radius: 3px;
+    position: relative;
+}
+
+.alerta-centro.erro .error-message {
+    position: absolute;
+    color: rgb(236, 53, 33);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alerta-centro.warning {
+    background-color: rgba(250, 230, 54, 0.315);
+    width: 60vh;
+    height: 4em;
+    margin: auto auto;
+    border: 1px solid rgba(250, 230, 54, 0.808);
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.warning-message {
+    position: relative;
+    color: rgb(182, 169, 52);
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.alerta-centro.success {
+    background-color: rgba(114, 250, 114, 0.26);
+    width: 60vh;
+    height: 4em;
+    margin: -20px auto;
+    border: 1px solid rgba(114, 250, 114, 0.678);
+    border-radius: 3px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    position: absolute;
+    color: rgb(137, 182, 52);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
